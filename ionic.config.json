@@ -1,0 +1,7 @@
+{
+  "name": "sistem-informasi-13",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
