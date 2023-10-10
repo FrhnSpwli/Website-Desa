@@ -38,9 +38,11 @@ const App: React.FC = () => (
         <Route exact path="/about">
           <About />
         </Route>
+        <Route exact path="/settings" component={Settings} />
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
 );
+
 
 export default App;
