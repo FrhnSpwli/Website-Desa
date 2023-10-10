@@ -5,7 +5,7 @@ import { IonReactRouter } from '@ionic/react-router';
 import { createRoot } from 'react-dom/client';
 import Home from './pages/Home';
 import Settings from './pages/Settings';
-
+import About from './pages/About';
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
 
@@ -29,21 +29,23 @@ setupIonicReact();
 const container = document.getElementById('root');
 const root = createRoot(container!);
 
-const App: React.FC = () => {
-  return (
-    <Router>
-      <Switch>
-        <Route exact path="/" component={Home} />
+const App: React.FC = () => (
+  <IonApp>
+    <IonReactRouter>
+      <IonRouterOutlet>
+        <Route exact path="/home">
+          <Home />
+        </Route>
+        <Route exact path="/">
+          <Redirect to="/home" />
+        </Route>
+        <Route exact path="/about">
+          <About />
         <Route exact path="/settings" component={Settings} />
-      </Switch>
-    </Router>
-  );
-};
-
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+        </Route>
+      </IonRouterOutlet>
+    </IonReactRouter>
+  </IonApp>
 );
 
 export default App;
