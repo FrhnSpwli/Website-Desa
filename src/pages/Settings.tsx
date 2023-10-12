@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { IonInput, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonList, IonItem, IonLabel, IonToggle, IonSelect, IonSelectOption, IonRange, IonIcon } from '@ionic/react';
 import { chevronDownOutline, chevronUpOutline, personCircleOutline, notificationsOutline, colorPaletteOutline, lockClosedOutline, helpCircleOutline, informationCircleOutline } from 'ionicons/icons';
-import '../components/Settings.css';
+import './Settings.css';
 
 const Settings: React.FC = () => {
   const [activeMenu, setActiveMenu] = useState('');
