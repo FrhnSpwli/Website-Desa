@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { IonInput, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonList, IonItem, IonLabel, IonToggle, IonSelect, IonSelectOption, IonRange, IonIcon } from '@ionic/react';
 import { chevronDownOutline, chevronUpOutline, personCircleOutline, notificationsOutline, colorPaletteOutline, lockClosedOutline, helpCircleOutline, informationCircleOutline } from 'ionicons/icons';
 import './Settings.css';
+import Navbar from '../components/organisms/Navbar';
 
 const Settings: React.FC = () => {
   const [activeMenu, setActiveMenu] = useState('');
@@ -131,11 +132,7 @@ const Settings: React.FC = () => {
 
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Settings</IonTitle>
-        </IonToolbar>
-      </IonHeader>
+      <Navbar>Settings</Navbar>
       <IonContent onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         {showHeader && (
           <div className='header' style={{ marginBottom: showFooter ? '50px' : '0' }}>
