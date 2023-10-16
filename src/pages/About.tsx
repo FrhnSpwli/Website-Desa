@@ -1,19 +1,19 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import Footer from '../components/organisms/Footer';
 import Header from '../components/organisms/Header';
-import './login.css'
+import './About.css';
+import Navbar from '../components/organisms/Navbar';
 
-const login: React.FC = () => {
+const About: React.FC = () => {
   return (
     <IonPage>
-      <Header />
-      <div className='Login-Page'>
-        <h1>Login</h1>
+      <Navbar>About</Navbar>
+      <div className='about-container'>
+        <h1>About</h1>
       </div>
-
       <Footer />
     </IonPage>
   );
 };
 
-export default login;
+export default About;
