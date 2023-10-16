@@ -39,7 +39,7 @@ return (
         fill="solid"
         label={`${children}`}
         labelPlacement="floating"
-        helperText={`Enter a valid ${children}`}
+        helperText={`Masukkan ${children}`}
         errorText="Invalid email"
         onIonInput={(event) => validate(event)}
         onIonBlur={() => markTouched()}

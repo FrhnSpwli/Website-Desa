@@ -1,23 +1,7 @@
-import React, { ReactNode } from 'react';
-import { 
-  IonButtons, 
-  IonContent, 
-  IonHeader, 
-  IonMenu, 
-  IonMenuButton, 
-  IonPage, 
-  IonTitle, 
-  IonToolbar, 
-  IonSearchbar, 
-  IonList, 
-  IonItem, 
-  IonLabel, 
-  IonIcon,
-  IonButton
-} from '@ionic/react';
+import React, { Children, ReactNode } from 'react';
+import { IonButtons, IonContent, IonHeader, IonMenu, IonMenuButton, IonPage, IonTitle, IonToolbar, IonSearchbar, IonItem, IonLabel } from '@ionic/react';
+import Styles from './Navbar.module.css'
 import Button from '../../atoms/button';
-import { helpCircle } from 'ionicons/icons';
-import Styles from './Navbar.module.css';
 
 interface NavbarProps {
   children: ReactNode;
@@ -32,21 +16,29 @@ const Navbar = ({ children }: NavbarProps) => {
             <IonTitle>Menu Content</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <IonContent className="ion-padding">
-        <IonList lines="full">
-         <IonItem>
-          <IonLabel>HOME</IonLabel>
-         </IonItem>
-         <IonItem>
-          <IonLabel>CONTACT</IonLabel>
-         </IonItem>
-         <IonItem>
-          <IonLabel>SETTING</IonLabel>
-         </IonItem>
-        </IonList>
-          <Button>Push me</Button>
+        <IonContent>
+          <div className={Styles.container}>
+            <div className={Styles.menuItem}>
+              <IonItem routerLink="/home">
+                <IonLabel>Home</IonLabel>
+              </IonItem>
+              <IonItem routerLink="/about">
+                <IonLabel>About</IonLabel>
+              </IonItem>
+              <IonItem routerLink="/contact">
+                <IonLabel>Contact</IonLabel>
+              </IonItem>
+              <IonItem routerLink="/settings">
+                <IonLabel>Settings</IonLabel>
+              </IonItem>
+            </div>
+            <div className={Styles.button}>
+              <Button>Login</Button>
+              <Button>Sign Up</Button>
+            </div>
+          </div>
         </IonContent>
-      </IonMenu>
+      </IonMenu >
       <IonHeader id="main-content">
         <IonToolbar>
           <div className={Styles.menu}>
