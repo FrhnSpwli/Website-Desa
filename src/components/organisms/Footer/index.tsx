@@ -1,13 +1,14 @@
 import React from 'react';
 import { IonContent, IonFooter, IonTitle, IonToolbar } from '@ionic/react';
+import Styles from './Footer.module.css';
 
 function Footer() {
   return (
     <>
       <IonFooter>
-        <IonToolbar>
-          <IonTitle>Footer</IonTitle>
-        </IonToolbar>
+        <div className={Styles.container}>
+          <p>Sistem Informasi 13</p>
+        </div>
       </IonFooter>
     </>
   );
