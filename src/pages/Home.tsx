@@ -1,13 +1,13 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ExploreContainer from '../components/molecules/ExploreContainer';
 import Footer from '../components/organisms/Footer';
-import Header from '../components/organisms/Header';
+import Navbar from '../components/organisms/Navbar';
 import './Home.css';
 
 const Home: React.FC = () => {
   return (
     <IonPage>
-      <Header />
+      <Navbar>Home</Navbar>
       <ExploreContainer />
       <Footer />
     </IonPage>
