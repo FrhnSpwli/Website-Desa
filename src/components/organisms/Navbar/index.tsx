@@ -1,7 +1,23 @@
-import React, { Children, ReactNode } from 'react';
-import { IonButtons, IonContent, IonHeader, IonMenu, IonMenuButton, IonPage, IonTitle, IonToolbar, IonSearchbar } from '@ionic/react';
+import React, { ReactNode } from 'react';
+import { 
+  IonButtons, 
+  IonContent, 
+  IonHeader, 
+  IonMenu, 
+  IonMenuButton, 
+  IonPage, 
+  IonTitle, 
+  IonToolbar, 
+  IonSearchbar, 
+  IonList, 
+  IonItem, 
+  IonLabel, 
+  IonIcon,
+  IonButton
+} from '@ionic/react';
 import Button from '../../atoms/button';
-import Styles from './Navbar.module.css'
+import { helpCircle } from 'ionicons/icons';
+import Styles from './Navbar.module.css';
 
 interface NavbarProps {
   children: ReactNode;
@@ -10,17 +26,28 @@ interface NavbarProps {
 const Navbar = ({ children }: NavbarProps) => {
   return (
     <>
-      <IonMenu side="end" contentId="main-content">
+      <IonMenu side="end" contentId="main-content" >
         <IonHeader>
-          <IonToolbar>
+          <IonToolbar color="primary">
             <IonTitle>Menu Content</IonTitle>
           </IonToolbar>
         </IonHeader>
         <IonContent className="ion-padding">
+        <IonList lines="full">
+         <IonItem>
+          <IonLabel>HOME</IonLabel>
+         </IonItem>
+         <IonItem>
+          <IonLabel>CONTACT</IonLabel>
+         </IonItem>
+         <IonItem>
+          <IonLabel>SETTING</IonLabel>
+         </IonItem>
+        </IonList>
           <Button>Push me</Button>
         </IonContent>
       </IonMenu>
-      <IonHeader>
+      <IonHeader id="main-content">
         <IonToolbar>
           <div className={Styles.menu}>
             <IonTitle>{children}</IonTitle>
