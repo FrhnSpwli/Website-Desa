@@ -1,4 +1,4 @@
-import React, { Children, ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { IonButtons, IonContent, IonHeader, IonMenu, IonMenuButton, IonPage, IonTitle, IonToolbar, IonSearchbar, IonItem, IonLabel } from '@ionic/react';
 import Styles from './Navbar.module.css'
 import Button from '../../atoms/button';
@@ -19,16 +19,16 @@ const Navbar = ({ children }: NavbarProps) => {
         <IonContent>
           <div className={Styles.container}>
             <div className={Styles.menuItem}>
-              <IonItem routerLink="/home">
+              <IonItem href='/home'>
                 <IonLabel>Home</IonLabel>
               </IonItem>
-              <IonItem routerLink="/about">
+              <IonItem href='/about'>
                 <IonLabel>About</IonLabel>
               </IonItem>
-              <IonItem routerLink="/contact">
+              <IonItem href='/contact'>
                 <IonLabel>Contact</IonLabel>
               </IonItem>
-              <IonItem routerLink="/settings">
+              <IonItem href='/settings'>
                 <IonLabel>Settings</IonLabel>
               </IonItem>
             </div>
