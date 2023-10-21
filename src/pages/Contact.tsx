@@ -1,10 +1,9 @@
-import { IonContent, IonHeader, IonItem, IonList, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonPage } from '@ionic/react';
 import Footer from '../components/organisms/Footer';
-import Button from '../components/atoms/button';
 import Input from '../components/atoms/input';
 import Navbar from '../components/organisms/Navbar';
 import Textarea from '../components/atoms/textarea';
-import Styles from './Contact.module.css';
+import Styles from '../styles/Contact.module.css';
 
 const Contact: React.FC = () => {
   return (
