@@ -8,7 +8,7 @@ interface TextareaProps {
 const Textarea = ({ children }: TextareaProps) => {
 
     return (
-        <IonTextarea label={`${children}`} labelPlacement="floating" fill="solid" placeholder={`Masukkan ${children}`}></IonTextarea>
+        <IonTextarea mode='ios' label={`${children}`} labelPlacement="floating" fill="solid" placeholder={`Masukkan ${children}`}></IonTextarea>
     );
 }
 export default Textarea;
