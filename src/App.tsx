@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Landing from './pages/Landing';
 import Login from './pages/login';
 import Settings from './pages/Settings';
+import notFound from './pages/notFound';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -39,7 +40,8 @@ const App: React.FC = () => (
         <Route path="/settings" component={Settings} />
         <Route path="/login" component={Login} />
         <Route path="/landing" component={Landing} />
-        <Route exact path="/" render={() => <Redirect to="/landing" />} />
+        <Route exact path="/" render={() => <Redirect to="/home" />} />
+        <Route component={notFound} />
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
