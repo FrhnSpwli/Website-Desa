@@ -1,15 +1,3 @@
-.menu {
-    display: flex;
-}
-
-.ios-searchbar {
-    --border-radius: 20px; /* Adjust border-radius */
-    --border-color: blue; /* Adjust border color */
-    --placeholder-color: gray; /* Adjust placeholder color */
-    padding-right: 1000px;
-  }
-  
-
 .container {
     height: 100%;
     display: flex;

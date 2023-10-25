@@ -1,6 +1,6 @@
 import { ReactNode, useState, useEffect } from 'react';
 import { IonButtons, IonContent, IonHeader, IonMenu, IonMenuButton, IonTitle, IonToolbar, IonSearchbar, IonItem, IonLabel, IonIcon } from '@ionic/react';
-import { call, document, home, settings } from 'ionicons/icons';
+import { call, open , document, home, settings,  } from 'ionicons/icons';
 import Styles from './Navbar.module.css'
 import Button from '../../atoms/button';
 import SearchBar from '../../molecules/searchBar';
@@ -41,8 +41,12 @@ const Navbar = ({ children }: NavbarProps) => {
                 <IonLabel>Home</IonLabel>
               </IonItem>
               <IonItem href='/about'>
-                <IonIcon icon={document} slot="start" />
+                <IonIcon icon={open} slot="start" />
                 <IonLabel>About</IonLabel>
+              </IonItem>
+              <IonItem href='/artikel'>
+                <IonIcon icon={document} slot="start" />
+                <IonLabel>Artikel</IonLabel>
               </IonItem>
               <IonItem href='/contact'>
                 <IonIcon icon={call} slot="start" />
@@ -60,7 +64,7 @@ const Navbar = ({ children }: NavbarProps) => {
           </div>
         </IonContent>
       </IonMenu >
-      <IonHeader id="main-content" class='ion-padding'>
+      <IonHeader id="main-content" class='ion-padding-horizontal'>
         <div className={Styles.menu}>
           <IonTitle class='ion-no-padding'>{children}</IonTitle>
           <div className={Styles.content}>
@@ -70,6 +74,9 @@ const Navbar = ({ children }: NavbarProps) => {
               </div>
               <div className={Styles.item}>
                 <a href='/about'>About</a>
+              </div>
+              <div className={Styles.item}>
+                <a href='/artikel'>Artikel</a>
               </div>
               <div className={Styles.item}>
                 <a href='/contact'>Contact</a>
@@ -89,7 +96,7 @@ const Navbar = ({ children }: NavbarProps) => {
               <IonMenuButton></IonMenuButton>
             </IonButtons>
           )}
-        </div >
+        </div>
       </IonHeader >
     </>
   );
