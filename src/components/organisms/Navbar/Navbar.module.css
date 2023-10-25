@@ -1,0 +1,85 @@
+.menu {
+    display: flex;
+}
+
+.ios-searchbar {
+    --border-radius: 20px; /* Adjust border-radius */
+    --border-color: blue; /* Adjust border color */
+    --placeholder-color: gray; /* Adjust placeholder color */
+    padding-right: 1000px;
+  }
+  
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.contentItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    padding: 12px 16px;
+}
+
+.item:hover {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+.item:active {
+    background-color: #e6e6e6;
+    transition: background-color 0.5s;
+    border-radius: 8px;
+}
+  
+.menuItem {
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .content {
+      display: none;
+    }
+  }
