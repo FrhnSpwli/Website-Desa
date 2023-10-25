@@ -36,10 +36,11 @@ return (
     <IonInput
         className={`${isValid ? 'ion-valid' : ''} ${isValid === false ? 'ion-invalid' : ''} ${isTouched ? 'ion-touched' : ''}`}
         type={`${type}`}
+        mode='ios'
         fill="solid"
         label={`${children}`}
         labelPlacement="floating"
-        helperText={`Enter a valid ${children}`}
+        helperText={`Masukkan ${children}`}
         errorText="Invalid email"
         onIonInput={(event) => validate(event)}
         onIonBlur={() => markTouched()}
