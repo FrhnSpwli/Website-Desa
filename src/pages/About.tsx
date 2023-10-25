@@ -1,48 +1,62 @@
-import { 
-  IonContent, 
-  IonHeader, 
+import {
+  IonContent,
+  IonHeader,
   IonPage,
-  IonTitle, 
+  IonTitle,
   IonToolbar,
-  IonText 
-} from '@ionic/react';
-import Footer from '../components/organisms/Footer';
-import Navbar from '../components/organisms/Navbar';
-import Styles from './About.module.css';
-import Button from '../components/atoms/button';
+  IonText,
+  IonCard,
+  IonCardContent,
+  IonCardHeader,
+  IonCardTitle,
+} from "@ionic/react";
+import Footer from "../components/organisms/Footer";
+import Navbar from "../components/organisms/Navbar";
+import Button from "../components/atoms/button";
+import Styles from "../styles/About.module.css";
+import { link } from "ionicons/icons";
+import { Link } from "react-router-dom";
 
 const About: React.FC = () => {
   return (
     <>
-    <Navbar >About</Navbar>
-    <IonContent>
-        {/* <div className="ion-content-scroll-host ion-padding">
-        <IonText color="primary">
-        <h1>Profil Desa</h1>
-        </IonText>
-          <img
-            src="https://images7.alphacoders.com/118/1189619.jpg"
-          />
-          <p>
-          Dengan luas wilayah sekitar 4,34 km persegi yang membentang di pesisir selatan pulau bali atau 
-          tepatnya di kabupaten jembrana, desa yeh kuning memiliki penduduk sekitar 2.963 jiwa yang terbagi 
-          dalam 1.013 KK di 5 banjar dinas dan 6 banjar adat. Sebagian besar penduduk di desa ini beragama hindu, 
-          sebagiannya lagi beragama islam, membuat desa ini memiliki toleransi yang cukup tinggi terhadap perbedaan agama.
-          </p>
-
-        </div> */}
-        <div className={Styles.container}>
-          <h1>Selamat Datang</h1>
-          <div>
-          <Button shape='round' >Jelajahi Komuditas</Button>
+      <Navbar>About</Navbar>
+      <IonContent>
+        <div className={Styles.hero}>
+          <div className={Styles.content}>
+            <h4>Hello, Welcome to</h4>
+            <h1>Teyvat</h1>
+            <h3>a village full of culture and natural panorama</h3>
+            <Button shape="round">Jelajahi Komuditas</Button>
           </div>
+        </div>
+
+        <section className={Styles.about}>
+          <div className={Styles.main}>
+            <img src="https://i.pinimg.com/564x/52/8f/4a/528f4a0b09cd03f8acedd974df297ee3.jpg" />
+            <div className={Styles.about_text}>
+              <IonText color="primary">
+                <h2>About Us</h2>
+              </IonText>
+              <h5>Teyvat - Mondstadt</h5>
+              <p>
+                Mondstadt is one of the seven regions of Teyvat, and the first
+                in which the Traveler starts to look for their lost sibling. It
+                is the nation that worships Lord Barbatos, the Anemo Archon and
+                God of Freedom.{" "}
+              </p>
+              <Button shape="round" path="/contact">Contact Us</Button>
+            </div>
+          </div>
+        </section>
+
+        <div className={Styles.service}>
+
         </div>
       </IonContent>
       <Footer />
-      </>
+    </>
   );
 };
 
 export default About;
-
-
