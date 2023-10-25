@@ -27,7 +27,7 @@ const Navbar = ({ children }: NavbarProps) => {
 
   return (
     <>
-      <IonMenu side="end" contentId="main-content">
+      <IonMenu side="end" contentId="main-content" >
         <IonHeader>
           <div className={Styles.box}>
             <SearchBar>Search Bar</SearchBar>
