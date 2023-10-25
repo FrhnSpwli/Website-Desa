@@ -20,7 +20,7 @@ import { Link } from "react-router-dom";
 const About: React.FC = () => {
   return (
     <>
-      <Navbar>About</Navbar>
+      <Navbar>Profile</Navbar>
       <IonContent>
         <div className={Styles.hero}>
           <div className={Styles.content}>
