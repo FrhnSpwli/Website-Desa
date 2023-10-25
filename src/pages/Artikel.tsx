@@ -1,8 +1,8 @@
 import Styles from '../styles/Artikel.module.css';
-import { IonContent, IonPage, IonHeader, IonTitle, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonCardSubtitle, IonThumbnail, IonImg } from '@ionic/react';
+import { IonContent, IonPage, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonCardSubtitle, IonImg } from '@ionic/react';
 import Navbar from '../components/organisms/Navbar';
 import Footer from '../components/organisms/Footer';
-import Pic from '../../assets/images/istockphoto-91633822-612x612.jpg'
+import Picture from '../../public/images/istockphoto-91633822-612x612.jpg';
 
 const Artikel = () => {
 
@@ -17,7 +17,7 @@ const Artikel = () => {
                     </div>
                     <div className={Styles.responsive}>
                         <IonCard>
-                            <IonImg src={Pic} />
+                            <IonImg src={Picture} />
                             <IonCardHeader>
                                 <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
                                 <IonCardTitle>Card Title</IonCardTitle>
@@ -28,7 +28,7 @@ const Artikel = () => {
                             </IonCardContent>
                         </IonCard>
                         <IonCard>
-                            <IonImg src={Pic} />
+                            <IonImg src={Picture} />
                             <IonCardHeader>
                                 <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
                                 <IonCardTitle>Card Title</IonCardTitle>
@@ -39,7 +39,7 @@ const Artikel = () => {
                             </IonCardContent>
                         </IonCard>
                         <IonCard>
-                            <IonImg src={Pic} />
+                            <IonImg src={Picture} />
                             <IonCardHeader>
                                 <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
                                 <IonCardTitle>Card Title</IonCardTitle>
@@ -50,7 +50,7 @@ const Artikel = () => {
                             </IonCardContent>
                         </IonCard>
                         <IonCard>
-                            <IonImg src={Pic} />
+                            <IonImg src={Picture} />
                             <IonCardHeader>
                                 <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
                                 <IonCardTitle>Card Title</IonCardTitle>
@@ -61,7 +61,7 @@ const Artikel = () => {
                             </IonCardContent>
                         </IonCard>
                         <IonCard>
-                            <IonImg src={Pic} />
+                            <IonImg src={Picture} />
                             <IonCardHeader>
                                 <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
                                 <IonCardTitle>Card Title</IonCardTitle>
@@ -72,7 +72,7 @@ const Artikel = () => {
                             </IonCardContent>
                         </IonCard>
                         <IonCard>
-                            <IonImg src={Pic} />
+                            <IonImg src={Picture} />
                             <IonCardHeader>
                                 <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
                                 <IonCardTitle>Card Title</IonCardTitle>
@@ -83,7 +83,7 @@ const Artikel = () => {
                             </IonCardContent>
                         </IonCard>
                         <IonCard>
-                            <IonImg src={Pic} />
+                            <IonImg src={Picture} />
                             <IonCardHeader>
                                 <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
                                 <IonCardTitle>Card Title</IonCardTitle>
@@ -94,7 +94,7 @@ const Artikel = () => {
                             </IonCardContent>
                         </IonCard>
                         <IonCard>
-                            <IonImg src={Pic} />
+                            <IonImg src={Picture} />
                             <IonCardHeader>
                                 <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
                                 <IonCardTitle>Card Title</IonCardTitle>
@@ -105,7 +105,7 @@ const Artikel = () => {
                             </IonCardContent>
                         </IonCard>
                         <IonCard>
-                            <IonImg src={Pic} />
+                            <IonImg src={Picture} />
                             <IonCardHeader>
                                 <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
                                 <IonCardTitle>Card Title</IonCardTitle>
@@ -116,7 +116,7 @@ const Artikel = () => {
                             </IonCardContent>
                         </IonCard>
                         <IonCard>
-                            <IonImg src={Pic} />
+                            <IonImg src={Picture} />
                             <IonCardHeader>
                                 <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
                                 <IonCardTitle>Card Title</IonCardTitle>
@@ -127,7 +127,7 @@ const Artikel = () => {
                             </IonCardContent>
                         </IonCard>
                         <IonCard>
-                            <IonImg src={Pic} />
+                            <IonImg src={Picture} />
                             <IonCardHeader>
                                 <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
                                 <IonCardTitle>Card Title</IonCardTitle>
@@ -138,7 +138,7 @@ const Artikel = () => {
                             </IonCardContent>
                         </IonCard>
                         <IonCard>
-                            <IonImg src={Pic} />
+                            <IonImg src={Picture} />
                             <IonCardHeader>
                                 <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
                                 <IonCardTitle>Card Title</IonCardTitle>
@@ -149,7 +149,7 @@ const Artikel = () => {
                             </IonCardContent>
                         </IonCard>
                         <IonCard>
-                            <IonImg src={Pic} />
+                            <IonImg src={Picture} />
                             <IonCardHeader>
                                 <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
                                 <IonCardTitle>Card Title</IonCardTitle>
@@ -160,7 +160,7 @@ const Artikel = () => {
                             </IonCardContent>
                         </IonCard>
                         <IonCard>
-                            <IonImg src={Pic} />
+                            <IonImg src={Picture} />
                             <IonCardHeader>
                                 <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
                                 <IonCardTitle>Card Title</IonCardTitle>
