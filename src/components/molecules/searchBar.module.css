@@ -1,0 +1,10 @@
+ion-searchbar {
+    --color: var(--ion-color-dark);
+    --placeholder-color: var(--ion-color-medium);
+    --background: var(--ion-color-light);
+    --box-shadow: none;
+    --border-radius: 24px;
+    --icon-color: var(--ion-color-primary);
+    --clear-button-color: var(--ion-color-primary);
+    text-align: left;
+  }
