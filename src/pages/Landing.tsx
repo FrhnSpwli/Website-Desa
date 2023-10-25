@@ -14,7 +14,7 @@ const Landing: React.FC = () => {
            <IonText><h1 className='landing-content-heading1'>Welcome to My Landing Page</h1></IonText>
             <IonText><p className='landing-content-heading2'>This is a simple landing page.</p></IonText>
             <IonButton> 
-              Learn More 
+              Start 
             </IonButton>
             </section>
             <img src='./Fontaine Genshin impact.jpg' alt="image"/>
