@@ -1,4 +1,4 @@
-import { IonIcon, IonItem, IonPage } from '@ionic/react';
+import { IonContent, IonIcon, IonItem, IonPage } from '@ionic/react';
 import Footer from '../components/organisms/Footer';
 import Input from '../components/atoms/input';
 import Navbar from '../components/organisms/Navbar';
@@ -11,6 +11,7 @@ const Contact: React.FC = () => {
   return (
     <IonPage>
       <Navbar>Contact</Navbar>
+      {/* <IonContent> */}
       <div className={Styles.container}>
         <div className={Styles.left}>
           <div className={Styles.header}>
@@ -36,6 +37,7 @@ const Contact: React.FC = () => {
         </div>
       </div>
       <Footer />
+      {/* </IonContent> */}
     </IonPage>
   );
 };
