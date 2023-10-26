@@ -3,6 +3,9 @@ import Footer from '../components/organisms/Footer';
 import Navbar from '../components/organisms/Navbar';
 import Styles from '../styles/Landing.module.css';
 import Pict1 from '/images/fontaine genim.jpg'
+import Pict2 from '/images/fonten gi.jpg'
+import Pict3 from '/images/fontaine.jpg'
+import Pict4 from '/images/fontaine gi.jpg'
 
 const Landing: React.FC = () => {
   return (
@@ -38,7 +41,7 @@ const Landing: React.FC = () => {
                         </IonCardContent>
                   </IonCard>
                   <IonCard>
-                  <IonImg />
+                  <IonImg src={Pict2}/>
                     <IonCardHeader>
                         <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
                         <IonCardTitle>Card Title</IonCardTitle>
@@ -49,7 +52,7 @@ const Landing: React.FC = () => {
                         </IonCardContent>
                   </IonCard>
                   <IonCard>
-                  <IonImg />
+                  <IonImg src={Pict3}/>
                     <IonCardHeader>
                         <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
                         <IonCardTitle>Card Title</IonCardTitle>
@@ -60,7 +63,7 @@ const Landing: React.FC = () => {
                         </IonCardContent>
                   </IonCard>
                   <IonCard>
-                  <IonImg />
+                  <IonImg src={Pict4}/>
                     <IonCardHeader>
                         <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
                         <IonCardTitle>Card Title</IonCardTitle>
