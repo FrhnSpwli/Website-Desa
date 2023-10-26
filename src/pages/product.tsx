@@ -2,10 +2,10 @@ import Styles from '../styles/Product.module.css';
 import { IonContent, IonPage, IonHeader, IonTitle, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonCardSubtitle, IonThumbnail, IonImg } from '@ionic/react';
 import Navbar from '../components/organisms/Navbar';
 import Footer from '../components/organisms/Footer';
-import Pic1 from '../../assets/images/cimicimi.jpg'
-import Pic2 from '../../assets/images/pastel asap.jpg'
-import Pic3 from '../../assets/images/telur asin.jpg'
-import Pic4 from '../../assets/images/sedang_1668397058_marning.jpg'
+import Pic1 from '/images/cimicimi.jpg'
+import Pic2 from '/images/pastel asap.jpg'
+import Pic3 from '/images/telur asin.jpg'
+import Pic4 from '/images/sedang_1668397058_marning.jpg'
 
 const Product = () => {
 
