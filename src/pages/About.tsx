@@ -1,14 +1,7 @@
 import {
   IonContent,
-  IonHeader,
   IonPage,
-  IonTitle,
-  IonToolbar,
   IonText,
-  IonCard,
-  IonCardContent,
-  IonCardHeader,
-  IonCardTitle,
 } from "@ionic/react";
 import Footer from "../components/organisms/Footer";
 import Navbar from "../components/organisms/Navbar";
@@ -19,7 +12,7 @@ import { Link } from "react-router-dom";
 
 const About: React.FC = () => {
   return (
-    <>
+    <IonPage>
       <Navbar>Profile</Navbar>
       <IonContent>
         <div className={Styles.hero}>
@@ -55,7 +48,7 @@ const About: React.FC = () => {
         </div>
       </IonContent>
       <Footer />
-    </>
+    </IonPage>
   );
 };
 
