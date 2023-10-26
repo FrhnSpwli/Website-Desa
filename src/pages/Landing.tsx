@@ -16,7 +16,7 @@ const Landing: React.FC = () => {
           <div className={Styles.content}>
            <section className={Styles.contentButton}> 
            <IonText><h1 className={Styles.contentHeading1}>Selamat Datang di Web Desa Fontaine</h1></IonText>
-            <IonText><p className={Styles.contentHeading2}>Apa yang anda butuhkan ada disini!</p></IonText>
+            <IonText><p className={Styles.contentHeading2}>Apa yang anda cari ada disini!</p></IonText>
             <IonButton> 
               Get Started!
             </IonButton>
