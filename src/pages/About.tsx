@@ -2,6 +2,13 @@ import {
   IonContent,
   IonPage,
   IonText,
+  IonCard,
+  IonCardContent,
+  IonCardHeader,
+  IonCardTitle,
+  IonList,
+  IonItem,
+  IonLabel,
 } from "@ionic/react";
 import Footer from "../components/organisms/Footer";
 import Navbar from "../components/organisms/Navbar";
@@ -36,16 +43,107 @@ const About: React.FC = () => {
                 Mondstadt is one of the seven regions of Teyvat, and the first
                 in which the Traveler starts to look for their lost sibling. It
                 is the nation that worships Lord Barbatos, the Anemo Archon and
-                God of Freedom.{" "}
+                God of Freedom.
               </p>
-              <Button shape="round" path="/contact">Contact Us</Button>
+              <Button shape="round" path="/contact">
+                Contact Us
+              </Button>
             </div>
           </div>
         </section>
 
         <div className={Styles.service}>
+          <div className={Styles.service_text}>
+            <IonText color="primary">
+              <h2>Vision and Mission</h2>
+            </IonText>
+          </div>
 
+          <div className={Styles.responsive}>
+            <IonCard color="primary">
+              <IonCardHeader>
+                <IonCardTitle>VISION</IonCardTitle>
+              </IonCardHeader>
+              <IonCardContent>
+                <IonItem color={"primary"}>
+                  <p>
+                    Menyelenggarakan pemerintah daerah yang bersih , transparan,
+                    demokratis dan terbebas dari korupsi
+                  </p>
+                </IonItem>
+                <IonItem color={"primary"}>
+                  <p>
+                    Meningkatkan mutu kesejahteraan masyarakat untuk mencapai
+                    taraf hidup yang lebih baik dan berpendidikan
+                  </p>
+                </IonItem>
+                <IonItem color={"primary"}>
+                  <p>
+                    Mengembangkan perekonomian masyarakat melalui potensi desa
+                  </p>
+                </IonItem>
+                <IonItem color={"primary"}>
+                  <p>Meningkatkan seni budaya yang ada di desa Mondstadt</p>
+                </IonItem>
+                <IonItem color={"primary"}>
+                  <p>Meningkatkan kegiatan sosial</p>
+                </IonItem>
+              </IonCardContent>
+            </IonCard>
+
+            <IonCard color="primary">
+              <IonCardHeader>
+                <IonCardTitle>MISSION</IonCardTitle>
+              </IonCardHeader>
+              <IonCardContent>
+                <IonItem color={"primary"}>
+                  <p>
+                    Menyelenggarakan pemerintah daerah yang bersih , transparan,
+                    demokratis dan terbebas dari korupsi
+                  </p>
+                </IonItem>
+                <IonItem color={"primary"}>
+                  <p>
+                    Mengembangkan perekonomian masyarakat melalui potensi desa
+                  </p>
+                </IonItem>
+                <IonItem color={"primary"}>
+                  <p>
+                    Meningkatkan mutu kesejahteraan masyarakat untuk mencapai
+                    taraf hidup yang lebih baik dan berpendidikan
+                  </p>
+                </IonItem>
+                <IonItem color={"primary"}>
+                  <p>Meningkatkan kegiatan sosial</p>
+                </IonItem>
+                <IonItem color={"primary"}>
+                  <p>Meningkatkan seni budaya yang ada di desa Mondstadt</p>
+                </IonItem>
+              </IonCardContent>
+            </IonCard>
+          </div>
         </div>
+
+        <section className={Styles.chief}>
+          <div className={Styles.profile}>
+            <div className={Styles.chief_text}>
+              <IonText color="primary">
+                <h2>Chief</h2>
+              </IonText>
+              <h5>Nama : Jean Gunnhildr</h5>
+              <h5>Vision : Anemo</h5>
+              <h5>Jabatan : Grand Master Mondstadt</h5>
+
+              <p>
+                Mondstadt is one of the seven regions of Teyvat, and the first
+                in which the Traveler starts to look for their lost sibling. It
+                is the nation that worships Lord Barbatos, the Anemo Archon and
+                God of Freedom.{" "}
+              </p>
+            </div>
+            <img src="https://i.pinimg.com/564x/86/5f/3b/865f3b3d4da5a6615c580a275d84ab37.jpg" />
+          </div>
+        </section>
       </IonContent>
       <Footer />
     </IonPage>
