@@ -10,36 +10,36 @@ import {
 } from "@ionic/react";
 import { IonButton } from "@ionic/react";
 import { IonCheckbox } from "@ionic/react";
-import "./login.css";
-import { person, lockClosed } from "ionicons/icons";
-import style from "./login.module.css";
+import Styles from "../styles/Login.module.css";
 
-function Example() {
+function Login() {
   return (
-    <div className="login-pages">
-      <main className="login-container">
-        <section className="login-leftctn">
-          Desa Digital
+    <div className={Styles.loginPages}>
+      <main className={Styles.loginContainer}>
+        <section className={Styles.loginLeftctn}>
+          <p>Desa Digital</p>
           <p>Selamat Datang</p>
           <p>Sign in untuk lanjut ke akun anda</p>
         </section>
 
-        <section className={style.loginRightctn}>
-          <IonText className={style.Header}> Login </IonText>
-          <div className={style.input}><IonItem>
-            <IonIcon src="/person.svg" slot="start" color="primary"></IonIcon>
-            <IonLabel>Email :</IonLabel>
-            <IonInput placeholder="Add email"></IonInput>
-          </IonItem>
+        <section className={Styles.loginRightctn}>
+          <IonText className={Styles.Header}> Login </IonText>
+          <div className={Styles.input}>
+            <IonItem>
+              <IonIcon src="/person.svg" slot="start" color="primary"></IonIcon>
+              <IonLabel>Email :</IonLabel>
+              <IonInput placeholder="Add email"></IonInput>
+            </IonItem>
           </div>
-          <div className={style.input}><IonItem>
-            <IonIcon src="/lock.svg" slot="start" color="primary"></IonIcon>
-            <IonLabel>Password :</IonLabel>
-            <IonInput placeholder="Password"></IonInput>
-          </IonItem>
+          <div className={Styles.input}>
+            <IonItem>
+              <IonIcon src="/lock.svg" slot="start" color="primary"></IonIcon>
+              <IonLabel>Password :</IonLabel>
+              <IonInput placeholder="Password"></IonInput>
+            </IonItem>
           </div>
           <IonCheckbox>Keep me log in </IonCheckbox>{" "}
-          <IonButton color="light" shape="round">
+          <IonButton color="light" shape="round" >
             Login
           </IonButton>
           <a href="#">Forgot Password ?</a>
@@ -52,27 +52,4 @@ function Example() {
   );
 }
 
-export default Example;
-
-// import React from "react";
-// import { IonItem } from "@ionic/react";
-// import Styles from './login.module.css';
-// import { person } from "ionicons/icons";
-// import Input from "../components/atoms/input";
-// import Button from "../components/atoms/button";
-
-// function Login () {
-//   return (
-//     <div className={Styles.container}>
-//       <div className={Styles.left}>
-//       </div>
-//       <div className={Styles.right}>
-//         <Input type="email">Email</Input>
-//         <Input type="password">Password</Input>
-//         <Button>Login</Button>
-//       </div>
-//     </div>
-//   )
-// }
-
-// export default Login;
+export default Login;
