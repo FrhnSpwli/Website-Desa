@@ -2,7 +2,6 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonMenu, IonMenuB
 import Footer from '../components/organisms/Footer';
 import './Landing.css';
 import Navbar from '../components/organisms/Navbar';
-import Pic from '/images/cimicimi.jpg'
 
 const Landing: React.FC = () => {
   return (
