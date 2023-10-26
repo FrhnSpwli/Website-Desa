@@ -1,7 +1,8 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonMenu, IonMenuButton, IonButton, IonImg, IonText, IonCard, IonCardHeader, IonCardSubtitle, IonCardContent, IonCardTitle } from '@ionic/react';
 import Footer from '../components/organisms/Footer';
-import './Landing.css';
 import Navbar from '../components/organisms/Navbar';
+import Styles from '../styles/Landing.module.css';
+import Pict1 from '/images/fontaine genim.jpg'
 
 const Landing: React.FC = () => {
   return (
@@ -9,10 +10,10 @@ const Landing: React.FC = () => {
       <Navbar>Landing Page</Navbar>
 
         <IonContent>
-          <div className="landing-content">
-           <section className='landing-content-button'> 
-           <IonText><h1 className='landing-content-heading1'>Welcome to My Landing Page</h1></IonText>
-            <IonText><p className='landing-content-heading2'>This is a simple landing page.</p></IonText>
+          <div className={Styles.content}>
+           <section className={Styles.contentButton}> 
+           <IonText><h1 className={Styles.contentHeading1}>Welcome to My Landing Page</h1></IonText>
+            <IonText><p className={Styles.contentHeading2}>This is a simple landing page.</p></IonText>
             <IonButton> 
               Get Started!
             </IonButton>
@@ -21,12 +22,12 @@ const Landing: React.FC = () => {
           </div>
           
 
-          <IonText className='card_text'> Berita Terkini </IonText> 
-          <div className="card_container">
-            <div className="card_title">
-             <div className="card_responsive" >
+          <IonText className={Styles.cardText}> Berita Terkini </IonText> 
+          <div className={Styles.cardContainer}>
+            <div className={Styles.cardTitle}>
+             <div className={Styles.cardResponsive}>
                 <IonCard>
-                  <IonImg />
+                  <IonImg src={Pict1}/>
                     <IonCardHeader>
                         <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
                         <IonCardTitle>Card Title</IonCardTitle>
