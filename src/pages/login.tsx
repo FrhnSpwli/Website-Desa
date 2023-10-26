@@ -8,7 +8,6 @@ const login: React.FC = () => {
       <div className='Login-Page'>
         <h1>Login</h1>
       </div>
-
       <Footer />
     </IonPage>
   );

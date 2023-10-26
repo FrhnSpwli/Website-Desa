@@ -1,0 +1,79 @@
+ion-toolbar {
+    --opacity: 0.5;
+}
+
+.hero {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(https://images7.alphacoders.com/118/1189619.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+}
+
+.content h1 {
+    color: white;
+    margin: 20px 0px 20px;
+    font-size: 75px;
+}
+
+.content h3 {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+
+.content h4 {
+    color: white;
+    letter-spacing: 2px;
+    font-size: 22px;
+}
+
+.about {
+    width: 100%;
+    padding: 100px 0px;
+}
+
+.about img {
+    height: auto;
+    width: 430px;
+}
+
+.about_text {
+    width: 550px;
+}
+
+.main {
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about_text h2 {
+    font-size: 75px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.about_text h5 {
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+}
+
+.about_text p {
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}

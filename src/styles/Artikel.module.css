@@ -3,6 +3,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 48px;
+    gap: 12px;
+}
+
+.title {
+    text-align: center;
 }
 
 .responsive {
@@ -25,5 +31,9 @@
 @media (max-width: 480px) {
     .responsive {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .container {
+        padding: 24px;
     }
 }
