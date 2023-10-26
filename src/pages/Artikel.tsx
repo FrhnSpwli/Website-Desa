@@ -2,16 +2,15 @@ import Styles from '../styles/Artikel.module.css';
 import { IonContent, IonPage, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonCardSubtitle, IonImg } from '@ionic/react';
 import Navbar from '../components/organisms/Navbar';
 import Footer from '../components/organisms/Footer';
-import Picture from '../../public/images/istockphoto-91633822-612x612.jpg';
+import Picture from '/images/istockphoto-91633822-612x612.jpg';
 
 const Artikel = () => {
 
     return (
         <IonPage>
-            <Navbar>Berita dan Pengumuman</Navbar>
+            <Navbar>Artikel</Navbar>
             <IonContent>
                 <div className={Styles.container}>
-                    {/* for the title of the page */}
                     <div className={Styles.title}>
                         <h1>Berita dan Pengumuman</h1>
                     </div>
@@ -170,7 +169,6 @@ const Artikel = () => {
                                 and climb a mountain or spend a week in the woods. Wash your spirit clean.
                             </IonCardContent>
                         </IonCard>
- 
                     </div>
                 </div>
             </IonContent>
