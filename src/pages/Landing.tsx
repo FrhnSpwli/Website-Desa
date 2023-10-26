@@ -1,7 +1,11 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonMenu, IonMenuButton, IonButton, IonImg, IonText, IonCard, IonCardHeader, IonCardSubtitle, IonCardContent, IonCardTitle } from '@ionic/react';
 import Footer from '../components/organisms/Footer';
-import './Landing.css';
 import Navbar from '../components/organisms/Navbar';
+import Styles from '../styles/Landing.module.css';
+import Pict1 from '/images/fontaine genim.jpg'
+import Pict2 from '/images/fonten gi.jpg'
+import Pict3 from '/images/fontaine.jpg'
+import Pict4 from '/images/fontaine gi.jpg'
 
 const Landing: React.FC = () => {
   return (
@@ -9,10 +13,10 @@ const Landing: React.FC = () => {
       <Navbar>Landing Page</Navbar>
 
         <IonContent>
-          <div className="landing-content">
-           <section className='landing-content-button'> 
-           <IonText><h1 className='landing-content-heading1'>Welcome to My Landing Page</h1></IonText>
-            <IonText><p className='landing-content-heading2'>This is a simple landing page.</p></IonText>
+          <div className={Styles.content}>
+           <section className={Styles.contentButton}> 
+           <IonText><h1 className={Styles.contentHeading1}>Selamat Datang di Web Desa Fontaine</h1></IonText>
+            <IonText><p className={Styles.contentHeading2}>Apa yang anda cari ada disini!</p></IonText>
             <IonButton> 
               Get Started!
             </IonButton>
@@ -21,52 +25,53 @@ const Landing: React.FC = () => {
           </div>
           
 
-          <IonText className='card_text'> Berita Terkini </IonText> 
-          <div className="card_container">
-            <div className="card_title">
-             <div className="card_responsive" >
+          <IonText className={Styles.cardText}> Berita Terkini </IonText> 
+          <div className={Styles.cardContainer}>
+            <div className={Styles.cardTitle}>
+             <div className={Styles.cardResponsive}>
                 <IonCard>
-                  <IonImg />
+                  <IonImg src={Pict1}/>
                     <IonCardHeader>
-                        <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
-                        <IonCardTitle>Card Title</IonCardTitle>
+                        <IonCardSubtitle>Desa Fontaine</IonCardSubtitle>
+                        <IonCardTitle>Wilayah Baru?</IonCardTitle>
                         </IonCardHeader>
                         <IonCardContent>
-                            Keep close to Nature's heart... and break clear away, once in awhile,
-                            and climb a mountain or spend a week in the woods. Wash your spirit clean.
+                        Fontaine telah memiliki beberapa rumor dan bocoran 
+                        yang mengisyaratkan apa yang diharapkan dari wilayah baru tersebut.
                         </IonCardContent>
                   </IonCard>
                   <IonCard>
-                  <IonImg />
+                  <IonImg src={Pict2}/>
                     <IonCardHeader>
-                        <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
-                        <IonCardTitle>Card Title</IonCardTitle>
+                        <IonCardSubtitle>Desa Fontaine</IonCardSubtitle>
+                        <IonCardTitle>Siapa Archon Fontaine Sebenarnya?</IonCardTitle>
                         </IonCardHeader>
                         <IonCardContent>
-                            Keep close to Nature's heart... and break clear away, once in awhile,
-                            and climb a mountain or spend a week in the woods. Wash your spirit clean.
+                            Dari berita yang saya dapatkan menurut warga Desa Fontaine 
+                            archon fontaine yang sebenarnya adalah...
                         </IonCardContent>
                   </IonCard>
                   <IonCard>
-                  <IonImg />
+                  <IonImg src={Pict3}/>
                     <IonCardHeader>
-                        <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
-                        <IonCardTitle>Card Title</IonCardTitle>
+                        <IonCardSubtitle>Desa Fontaine</IonCardSubtitle>
+                        <IonCardTitle>Furina Focalor</IonCardTitle>
                         </IonCardHeader>
                         <IonCardContent>
-                            Keep close to Nature's heart... and break clear away, once in awhile,
-                            and climb a mountain or spend a week in the woods. Wash your spirit clean.
+                          Furina berkata: "Satu kebohongan selalu mengikuti kebohongan yang lain, 
+                          sehingga "keadilan" pasti menunggu di akhir."
                         </IonCardContent>
                   </IonCard>
                   <IonCard>
-                  <IonImg />
+                  <IonImg src={Pict4}/>
                     <IonCardHeader>
-                        <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
-                        <IonCardTitle>Card Title</IonCardTitle>
+                        <IonCardSubtitle>Desa Fontaine</IonCardSubtitle>
+                        <IonCardTitle>Bangunan di Desa Fontaine</IonCardTitle>
                         </IonCardHeader>
                         <IonCardContent>
-                            Keep close to Nature's heart... and break clear away, once in awhile,
-                            and climb a mountain or spend a week in the woods. Wash your spirit clean.
+                        konstruksi bangunan di Fontaine mengadopsi desain klasik bergaya Eropa dan hadir 
+                        dengan beberapa bangunan publik utama macam teater Opera Epiclese, pengadilan 
+                        The Court of Fontaine, dan masih banyak lagi.
                         </IonCardContent>
                   </IonCard>
               </div>
