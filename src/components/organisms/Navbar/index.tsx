@@ -1,9 +1,8 @@
 import { ReactNode, useState, useEffect } from 'react';
-import { IonButtons, IonContent, IonHeader, IonMenu, IonMenuButton, IonTitle, IonToolbar, IonSearchbar, IonItem, IonLabel, IonIcon } from '@ionic/react';
-import { call, open , document, home, settings,  } from 'ionicons/icons';
+import { IonButtons, IonContent, IonHeader, IonMenu, IonMenuButton, IonTitle, IonItem, IonLabel, IonIcon } from '@ionic/react';
+import { call, open , document, home, settings, cube } from 'ionicons/icons';
 import Styles from './Navbar.module.css'
 import Button from '../../atoms/button';
-import SearchBar from '../../molecules/searchBar';
 
 interface NavbarProps {
   children: ReactNode;
@@ -30,7 +29,7 @@ const Navbar = ({ children }: NavbarProps) => {
       <IonMenu side="end" contentId="main-content" >
         <IonHeader>
           <div className={Styles.box}>
-            <SearchBar>Search Bar</SearchBar>
+            <p>Logo</p>
           </div>
         </IonHeader>
         <IonContent>
@@ -48,6 +47,10 @@ const Navbar = ({ children }: NavbarProps) => {
                 <IonIcon icon={document} slot="start" />
                 <IonLabel>Artikel</IonLabel>
               </IonItem>
+              <IonItem href='/product'>
+                <IonIcon icon={cube} slot="start" />
+                <IonLabel>Produk</IonLabel>
+              </IonItem>
               <IonItem href='/contact'>
                 <IonIcon icon={call} slot="start" />
                 <IonLabel>Contact</IonLabel>
@@ -59,7 +62,7 @@ const Navbar = ({ children }: NavbarProps) => {
             </div>
             <div className={Styles.button}>
               <Button path='/login' fill='solid'>Login</Button>
-              <Button path='/signup' fill='outline'>Sign Up</Button>
+              {/* <Button path='/signup' fill='outline'>Sign Up</Button> */}
             </div>
           </div>
         </IonContent>
@@ -79,16 +82,18 @@ const Navbar = ({ children }: NavbarProps) => {
                 <a href='/artikel'>Artikel</a>
               </div>
               <div className={Styles.item}>
+                <a href='/product'>Produk</a>
+              </div>
+              <div className={Styles.item}>
                 <a href='/contact'>Contact</a>
               </div>
               <div className={Styles.item}>
                 <a href='/settings'>Settings</a>
               </div>
             </div>
-            <SearchBar>Search Bar</SearchBar>
             <div className={Styles.contentItem}>
               <Button path='/login' shape='round' fill='solid'>Login</Button>
-              <Button path='/signup' fill='outline'>Sign Up</Button>
+              {/* <Button path='/signup' fill='outline'>Sign Up</Button> */}
             </div>
           </div>
           {isSmallScreen && (
