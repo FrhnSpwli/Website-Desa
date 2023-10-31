@@ -3,30 +3,30 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 48px;
+  gap: 24px;
 }
 
-.title{
-  padding: 20px;
+.title {
   text-align: center;
 }
 
 .responsive {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Mengatur 2 kartu dalam satu baris */
-  justify-content: center; 
-  gap: 10px;
-  padding: 10px 100px;
+  justify-content: center;
 }
 
 .image {
-  height: 300px;
+  height: 400px;
   object-fit: cover;
 }
-/* Style kartu (card) disini */
 
 @media (max-width: 768px) {
   .responsive {
-    grid-template-columns: repeat(1, 1fr); /* Ketika lebar maksimum 768px, kembali ke 1 kartu dalam satu baris */
+    grid-template-columns: repeat(
+      1,
+      1fr
+    ); /* Ketika lebar maksimum 768px, kembali ke 1 kartu dalam satu baris */
   }
 }
-
