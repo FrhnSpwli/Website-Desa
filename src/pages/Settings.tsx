@@ -134,11 +134,6 @@ const Settings: React.FC = () => {
     <IonPage>
       <Navbar>Settings</Navbar>
       <IonContent onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-        {showHeader && (
-          <div className='header' style={{ marginBottom: showFooter ? '50px' : '0' }}>
-            <h1>!!!UNDER DEVELOPMENT!!!</h1>
-          </div>
-        )}
         <IonList>
           <IonItem button className={activeMenu === 'Account' ? 'active' : ''} onClick={() => setActiveMenu(activeMenu === 'Account' ? '' : 'Account')}>
             <IonIcon slot='start' icon={personCircleOutline} />
@@ -177,11 +172,6 @@ const Settings: React.FC = () => {
           </IonItem>
           {activeMenu === 'About' && renderMenuItems('About')}
         </IonList>
-        {showFooter && (
-          <div className='footer' style={{ marginTop: showHeader ? '50px' : '0' }}>
-            !!!UNDER DEVELOPMENT!!!
-          </div>
-        )}
       </IonContent>
     </IonPage>
   );

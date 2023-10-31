@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title{
+  padding: 20px;
+  text-align: center;
+}
+
+.responsive {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Mengatur 2 kartu dalam satu baris */
+  justify-content: center; 
+  gap: 10px;
+  padding: 10px 100px;
+}
+
+.image {
+  height: 300px;
+  object-fit: cover;
+}
+/* Style kartu (card) disini */
+
+@media (max-width: 768px) {
+  .responsive {
+    grid-template-columns: repeat(1, 1fr); /* Ketika lebar maksimum 768px, kembali ke 1 kartu dalam satu baris */
+  }
+}
+

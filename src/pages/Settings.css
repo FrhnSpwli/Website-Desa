@@ -5,27 +5,6 @@
   height: 100%;
 }
 
-/* Header */
-.header {
-  background-color: #5c5c5c;
-  padding: 10px;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.header h1 {
-  margin: 0;
-  font-size: 24px;
-}
-
-/* Footer */
-.footer {
-  background-color: #5c5c5c;
-  padding: 10px;
-  text-align: center;
-  margin-top: bottom;
-}
-
 /* Menu Items */
 .menu-items {
   padding: 10px;
@@ -68,7 +47,7 @@
 
 /* Active Menu Item */
 .active {
-  background-color: #5c5c5c;
+  text-decoration: double;
 }
 
 .active ion-icon {
