@@ -141,7 +141,7 @@ const About: React.FC = () => {
                 Mondstadt is one of the seven regions of Teyvat, and the first
                 in which the Traveler starts to look for their lost sibling. It
                 is the nation that worships Lord Barbatos, the Anemo Archon and
-                God of Freedom.{" "}
+                God of Freedom.
               </p>
             </div>
             <img src="https://i.pinimg.com/564x/86/5f/3b/865f3b3d4da5a6615c580a275d84ab37.jpg" />
