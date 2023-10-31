@@ -14,8 +14,6 @@ import Footer from "../components/organisms/Footer";
 import Navbar from "../components/organisms/Navbar";
 import Button from "../components/atoms/button";
 import Styles from "../styles/About.module.css";
-import { link } from "ionicons/icons";
-import { Link } from "react-router-dom";
 
 const About: React.FC = () => {
   return (
@@ -27,7 +25,7 @@ const About: React.FC = () => {
             <h4>Hello, Welcome to</h4>
             <h1>Teyvat</h1>
             <h3>a village full of culture and natural panorama</h3>
-            <Button shape="round">Jelajahi Komuditas</Button>
+            <Button shape="round" path="/product">Jelajahi Komuditas</Button>
           </div>
         </div>
 
