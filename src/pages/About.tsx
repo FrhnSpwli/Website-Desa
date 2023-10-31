@@ -1,24 +1,17 @@
 import {
   IonContent,
-  IonHeader,
-  IonPage,
-  IonTitle,
-  IonToolbar,
   IonText,
   IonCard,
   IonCardContent,
   IonCardHeader,
   IonCardTitle,
-  IonList,
   IonItem,
-  IonLabel,
 } from "@ionic/react";
 import Footer from "../components/organisms/Footer";
 import Navbar from "../components/organisms/Navbar";
 import Button from "../components/atoms/button";
 import Styles from "../styles/About.module.css";
-import { link } from "ionicons/icons";
-import { Link } from "react-router-dom";
+
 
 const About: React.FC = () => {
   return (
