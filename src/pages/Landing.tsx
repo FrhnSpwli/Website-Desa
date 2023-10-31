@@ -2,6 +2,7 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonMenu, IonMenuB
 import Footer from '../components/organisms/Footer';
 import Navbar from '../components/organisms/Navbar';
 import Styles from '../styles/Landing.module.css';
+import Pic from '/images/Fontaine Genshin impact.jpg'
 import Pict1 from '/images/fontaine genim.jpg'
 import Pict2 from '/images/fonten gi.jpg'
 import Pict3 from '/images/fontaine.jpg'
@@ -21,7 +22,7 @@ const Landing: React.FC = () => {
               Get Started!
             </IonButton>
             </section>
-            <img src='./Fontaine Genshin impact.jpg' alt="image"/>
+            <IonImg src={Pic}/>
           </div>
           
 
