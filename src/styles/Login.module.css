@@ -95,3 +95,8 @@
   flex-direction: column;
   width: 60%;
 }
+
+.keepLogin{
+  gap: 240px;
+  font-size: medium;
+}
