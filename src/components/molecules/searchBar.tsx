@@ -1,13 +1,13 @@
 import React, { ReactNode } from 'react';
-import { IonSearchbar } from '@ionic/react';
+import { IonSearchbar, SearchbarInputEventDetail } from '@ionic/react';
 import Styles from './searchBar.module.css';
 
 interface SearchBarProps {
     children: ReactNode;
-    onIonInput: (event: CustomEvent<void>) => void;
+    onInput: (event: CustomEvent<SearchbarInputEventDetail>) => void;
 }
 
-const SearchBar = ({ children, onIonInput }: SearchBarProps) => {
+const SearchBar = ({ children, onInput }: SearchBarProps) => {
     return (
         <div className={Styles.searchBar}>
             <IonSearchbar
@@ -17,7 +17,7 @@ const SearchBar = ({ children, onIonInput }: SearchBarProps) => {
                 animated={true}
                 color="light"
                 spellCheck={true}
-                onIonInput={onIonInput}
+                onIonInput={onInput}
             ></IonSearchbar>
         </div>
     );
