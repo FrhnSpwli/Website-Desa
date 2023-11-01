@@ -5,6 +5,7 @@ import {
   IonCardContent,
   IonCardHeader,
   IonCardTitle,
+  IonPage,
   IonItem,
 } from "@ionic/react";
 import Footer from "../components/organisms/Footer";
