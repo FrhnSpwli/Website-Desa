@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Styles from '../styles/Artikel.module.css';
-import { IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonPage, IonImg, IonContent } from '@ionic/react';
+import { IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonPage, IonImg, IonContent, SearchbarInputEventDetail } from '@ionic/react';
 import Navbar from '../components/organisms/Navbar';
 import SearchBar from '../components/molecules/searchBar';
 
@@ -58,13 +58,13 @@ function Artikel() {
 
     const [results, setResults] = useState([...data]);
 
-    const handleInput = (event: CustomEvent<{ value: string }>) => {
-        const query = event.detail.value;
+    const handleInput = (event: CustomEvent<SearchbarInputEventDetail>) => {
+        const query = event.detail.value ?? "";
         if (query === '') {
             setResults([...data]);
         } else {
             const filteredData = data.filter((item) => {
-                return item.title.toLowerCase().includes(query.toLowerCase());
+                return item.title.toLocaleLowerCase().includes(query.toLocaleLowerCase());
             });
             setResults([...filteredData]);
         }
@@ -78,7 +78,7 @@ function Artikel() {
                     <div className={Styles.title}>
                         <h1>Berita dan Pengumuman</h1>
                     </div>
-                    <SearchBar onIonInput={handleInput}>Search Bar</SearchBar>
+                    <SearchBar onInput={handleInput}>Search Bar</SearchBar>
                     <div className={Styles.responsive}>
                         {results.map((item, index) => (
                             <IonCard key={index}>
