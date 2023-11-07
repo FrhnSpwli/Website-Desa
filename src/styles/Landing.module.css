@@ -1,0 +1,62 @@
+.content{
+    display: flex;
+    padding: 128px;
+    gap: 32px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contentHeading1{
+    font-weight: 600;
+}
+
+.contentHeading2{
+    font-size: 14px;
+    width: max-content;
+}
+
+.contentButton{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardText{
+    display: flex;
+    padding: 8px 24px 8px 24px;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardResponsive {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1024px) {
+    .cardResponsive {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .cardResponsive {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .cardResponsive {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

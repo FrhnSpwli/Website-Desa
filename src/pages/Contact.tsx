@@ -1,16 +1,19 @@
-import { IonIcon, IonItem, IonPage } from '@ionic/react';
+import { IonContent, IonIcon, IonItem, IonPage } from '@ionic/react';
 import Footer from '../components/organisms/Footer';
 import Input from '../components/atoms/input';
 import Navbar from '../components/organisms/Navbar';
 import { mail, person } from 'ionicons/icons'
 import Textarea from '../components/atoms/textarea';
 import Styles from '../styles/Contact.module.css';
+import Picture from '/images/contact.svg'
+import Button from '../components/atoms/button';
 
 
 const Contact: React.FC = () => {
   return (
     <IonPage>
       <Navbar>Contact</Navbar>
+      <IonContent>
       <div className={Styles.container}>
         <div className={Styles.left}>
           <div className={Styles.header}>
@@ -29,13 +32,17 @@ const Contact: React.FC = () => {
             <div className={Styles.item}>
               <Textarea>Message</Textarea>
             </div>
+            <div className={Styles.btn}>
+            <Button shape='round'>Kirim</Button>
+            </div>
           </div>
         </div>
         <div className={Styles.right}>
-          <p>Disini harusnya gambar, cuma belum tau gambar apa</p>
+          <img src={Picture} alt="Contact" />
         </div>
       </div>
       <Footer />
+      </IonContent>
     </IonPage>
   );
 };
