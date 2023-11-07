@@ -6,7 +6,7 @@ import Contact from './pages/Contact';
 import Artikel from './pages/Artikel';
 import Home from './pages/Home';
 import Landing from './pages/Landing';
-import Login from './pages/login';
+import Login from './pages/Login';
 import Settings from './pages/Settings';
 import notFound from './pages/notFound';
 
@@ -28,7 +28,6 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
-import Login from "./pages/login";
 
 setupIonicReact();
 
