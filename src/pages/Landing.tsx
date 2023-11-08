@@ -2,7 +2,7 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonMenu, IonMenuB
 import Footer from '../components/organisms/Footer';
 import Navbar from '../components/organisms/Navbar';
 import Styles from '../styles/Landing.module.css';
-import Button from '../components/atoms/button';
+import Pic from '/images/Fontaine Genshin impact.jpg'
 import Pict1 from '/images/fontaine genim.jpg'
 import Pict2 from '/images/fonten gi.jpg'
 import Pict3 from '/images/fontaine.jpg'
@@ -20,7 +20,7 @@ const Landing: React.FC = () => {
               <IonText><p className={Styles.contentHeading2}>Apa yang anda cari ada disini!</p></IonText>
               <Button path='/about'>Get Started!</Button>
             </section>
-            <img src='/images/Fontaine Genshin impact.jpg' alt="image" className={Styles.image} />
+            <IonImg src={Pic}/>
           </div>
           <IonText className={Styles.cardText}> Berita Terkini </IonText>
           <div className={Styles.cardContainer}>
