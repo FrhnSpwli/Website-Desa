@@ -4,18 +4,24 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  }
+}
 
 .container {
-  width: 80%;
+  width: 60%;
   display: flex;
   border-radius: 16px;
-  border: 1px #3880ff solid;
+  border: 3px #414d62 solid;
+}
+
+.content {
+  font-weight: 100;
+  text-shadow: #2d2f32;
+  border: #2d2f32;
 }
 
 .left {
   width: 40%;
-  background-image: url(/JAWA\ biru..jpg);
+  background-image: url(BlueVillage.jpg);
   background-position: center;
   background-size: cover;
   border-radius: 16px 0 0 16px;
@@ -23,7 +29,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: rgb(255, 255, 255);
   justify-content: space-between;
 }
 
@@ -51,6 +57,7 @@
   border-radius: 0 16px 16px 0;
   justify-content: center;
   padding: 24px;
+
   /* border: 3px #3880ff solid; */
 }
 
@@ -64,9 +71,10 @@
 }
 
 .content h1 {
-  font-size: 36px;
+  font-size: 44px;
   font-weight: 600;
   color: #3880ff;
+
 }
 
 .item {
@@ -77,7 +85,8 @@
   background-color: white;
   padding: 4px 16px;
   border-radius: 8px;
-  border: 1px #3880ff solid;
+  border-radius: 16px;
+  border: 1px #3881ff solid;
 }
 
 .itemIcon {
@@ -93,5 +102,10 @@
 .btn {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 55%;
+}
+
+.keepLogin {
+  gap: 60px;
+  font-size: medium;
 }

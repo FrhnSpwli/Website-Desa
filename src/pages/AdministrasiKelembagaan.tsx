@@ -6,7 +6,7 @@ import Navbar from '../components/organisms/Navbar';
 const Home: React.FC = () => {
   return (
   <IonPage>
-      <Navbar>Home</Navbar>
+      <Navbar>AdminKlembagaan</Navbar>
       <ExploreContainer />
       <Footer />
     </IonPage>
