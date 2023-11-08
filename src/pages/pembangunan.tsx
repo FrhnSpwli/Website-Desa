@@ -1,8 +1,12 @@
+import Styles from '../styles/Pembangunan.module.css';
+// import Navbar from '../components/organisms/Navbar';
+import Footer from '../components/organisms/Footer';
 import { useMemo } from 'react';
 import {
   MaterialReactTable,
   useMaterialReactTable,
 } from 'material-react-table';
+import { IonContent, IonPage } from '@ionic/react';
 
 const data = [
   {
@@ -53,12 +57,12 @@ const Example = () => {
       {
         accessorKey: 'no', 
         header: 'No',
-        size: 50,
+        size: 10,
       },
       {
         accessorKey: 'nama_proyek',
         header: 'Nama Proyek',
-        size: 350,
+        size: 500,
       },
       {
         accessorKey: 'volume', 
@@ -68,17 +72,17 @@ const Example = () => {
       {
         accessorKey: 'biaya',
         header: 'Biaya',
-        size: 150,
+        size: 100,
       },
       {
         accessorKey: 'lokasi',
         header: 'Lokasi',
-        size: 200,
+        size: 155,
       },
       {
         accessorKey: 'ket',
         header: 'Keterangan',
-        size: 200,
+        size: 100,
       },
     ],
     [],
@@ -89,7 +93,24 @@ const Example = () => {
     data,
   });
 
-  return <MaterialReactTable table={table} />;
+  return (
+    <IonPage>
+      
+      <IonContent>
+        <div className={Styles.nav}>
+          <p>Administrasi Pembangunan <br></br>
+            Buku Inventaris Hasil-Hasil Pembangunan</p>
+          <button className={Styles.printbutton}>Print</button>
+        </div>
+        <div className={Styles.table}>
+          <MaterialReactTable table={table} />
+        </div>
+      </IonContent>
+      <Footer />
+    </IonPage>
+    
+  );
+  
 };
 
 export default Example;
