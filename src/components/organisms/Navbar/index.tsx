@@ -1,6 +1,6 @@
 import { ReactNode, useState, useEffect } from 'react';
 import { IonButtons, IonContent, IonHeader, IonMenu, IonMenuButton, IonTitle, IonItem, IonLabel, IonIcon } from '@ionic/react';
-import { call, open , document, home, settings, cube } from 'ionicons/icons';
+import { call, open, document, home, settings, cube } from 'ionicons/icons';
 import Styles from './Navbar.module.css'
 import Button from '../../atoms/button';
 
@@ -11,6 +11,16 @@ interface NavbarProps {
 const Navbar = ({ children }: NavbarProps) => {
 
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768);
+
+  const [activePage, setActivePage] = useState('/home');
+
+  const isActive = (path: string) => {
+    return activePage === path;
+  }
+
+  useEffect(() => {
+    setActivePage(window.location.pathname);
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -45,11 +55,11 @@ const Navbar = ({ children }: NavbarProps) => {
               </IonItem>
               <IonItem href='/artikel'>
                 <IonIcon icon={document} slot="start" />
-                <IonLabel>Artikel</IonLabel>
+                <IonLabel>News</IonLabel>
               </IonItem>
               <IonItem href='/product'>
                 <IonIcon icon={cube} slot="start" />
-                <IonLabel>Produk</IonLabel>
+                <IonLabel>Products</IonLabel>
               </IonItem>
               <IonItem href='/contact'>
                 <IonIcon icon={call} slot="start" />
@@ -72,22 +82,22 @@ const Navbar = ({ children }: NavbarProps) => {
           <IonTitle class='ion-no-padding'>{children}</IonTitle>
           <div className={Styles.content}>
             <div className={Styles.contentItem}>
-              <div className={Styles.item}>
+              <div className={`${Styles.item} ${isActive('/home') ? Styles.active : ''}`}>
                 <a href='/home'>Home</a>
               </div>
-              <div className={Styles.item}>
+              <div className={`${Styles.item} ${isActive('/about') ? Styles.active : ''}`}>
                 <a href='/about'>About</a>
               </div>
-              <div className={Styles.item}>
-                <a href='/artikel'>Artikel</a>
+              <div className={`${Styles.item} ${isActive('/artikel') ? Styles.active : ''}`}>
+                <a href='/artikel'>News</a>
               </div>
-              <div className={Styles.item}>
-                <a href='/product'>Produk</a>
+              <div className={`${Styles.item} ${isActive('/product') ? Styles.active : ''}`}>
+                <a href='/product'>Products</a>
               </div>
-              <div className={Styles.item}>
+              <div className={`${Styles.item} ${isActive('/contact') ? Styles.active : ''}`}>
                 <a href='/contact'>Contact</a>
               </div>
-              <div className={Styles.item}>
+              <div className={`${Styles.item} ${isActive('/settings') ? Styles.active : ''}`}>
                 <a href='/settings'>Settings</a>
               </div>
             </div>
