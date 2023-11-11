@@ -1,7 +1,7 @@
 import Styles from '../styles/Pembangunan.module.css';
 // import Navbar from '../components/organisms/Navbar';
 import Footer from '../components/organisms/Footer';
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import {
   MaterialReactTable,
   useMaterialReactTable,
@@ -52,8 +52,15 @@ const data = [
 ];
 
 const Example = () => {
+  const [isTableVisible, setIsTableVisible] = useState(false);
+
+  const toggleTableVisibility = () => {
+    setIsTableVisible(!isTableVisible);
+  };
+
   const columns = useMemo(
     () => [
+      
       {
         accessorKey: 'no', 
         header: 'No',
@@ -91,11 +98,35 @@ const Example = () => {
   const table = useMaterialReactTable({
     columns,
     data,
+    enableColumnActions: false,
+    enableColumnFilters: false,
+    enablePagination: false,
+    enableSorting: false,
+    mrtTheme: (theme) => ({
+      baseBackgroundColor: theme.palette.background.default, //change default background color
+    }),
+    muiTableBodyRowProps: { hover: false },
+    muiTableProps: {
+      sx: {
+        border: '1px solid rgba(81, 81, 81, .5)',
+      },
+    },
+    muiTableHeadCellProps: {
+      sx: {
+        border: '1px solid rgba(81, 81, 81, .5)',
+        fontStyle: 'italic',
+        fontWeight: 'normal',
+      },
+    },
+    muiTableBodyCellProps: {
+      sx: {
+        border: '1px solid rgba(81, 81, 81, .5)',
+      },
+    },
   });
 
   return (
     <IonPage>
-      
       <IonContent>
         <div className={Styles.nav}>
           <p>Administrasi Pembangunan <br></br>
