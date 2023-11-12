@@ -3,56 +3,57 @@ import Styles from '../styles/Artikel.module.css';
 import { IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonPage, IonImg, IonContent, SearchbarInputEventDetail } from '@ionic/react';
 import Navbar from '../components/organisms/Navbar';
 import SearchBar from '../components/molecules/searchBar';
+import Footer from '../components/organisms/Footer';
 
 function Artikel() {
     const data = [
         {
-            title: 'Card Title 1',
+            title: 'Wilayah Baru?',
             date: '20 Oktober 2023',
-            description: 'This is the description for Card 1',
-            image: '/images/cimicimi.jpg'
+            description: 'Fontaine telah memiliki beberapa rumor dan bocoran yang mengisyaratkan apa yang diharapkan dari wilayah baru tersebut.',
+            image: '/images/fontaine genim.jpg'
         },
         {
+            title: 'Siapa Archon Fontaine Sebenarnya?',
             date: '20 Oktober 2023',
-            title: 'Card Title 2',
-            description: 'This is the description for Card 2',
-            image: '/images/istockphoto-91633822-612x612.jpg'
+            description: 'Dari berita yang saya dapatkan menurut warga Desa Fontaine archon fontaine yang sebenarnya adalah...',
+            image: '/images/fontaine.jpg'
         },
         {
-            title: 'Card Title 1',
+            title: 'Furina De Fontaine',
             date: '20 Oktober 2023',
-            description: 'This is the description for Card 1',
-            image: '/images/cimicimi.jpg'
+            description: 'Furina berkata: "Satu kebohongan selalu mengikuti kebohongan yang lain, sehingga "keadilan" pasti menunggu di akhir."',
+            image: '/images/fontaine gi.jpg'
         },
         {
+            title: 'Bangunan di Desa Fontaine',
             date: '20 Oktober 2023',
-            title: 'Card Title 2',
-            description: 'This is the description for Card 2',
-            image: '/images/istockphoto-91633822-612x612.jpg'
+            description: 'konstruksi bangunan di Fontaine mengadopsi desain klasik bergaya Eropa dan hadir dengan beberapa bangunan publik utama macam teater Opera Epiclese, pengadilan The Court of Fontaine, dan masih banyak lagi.',
+            image: '/images/fonten gi.jpg'
         },
         {
-            title: 'Card Title 1',
+            title: 'Wilayah Baru?',
             date: '20 Oktober 2023',
-            description: 'This is the description for Card 1',
-            image: '/images/cimicimi.jpg'
+            description: 'Fontaine telah memiliki beberapa rumor dan bocoran yang mengisyaratkan apa yang diharapkan dari wilayah baru tersebut.',
+            image: '/images/fontaine genim.jpg'
         },
         {
+            title: 'Siapa Archon Fontaine Sebenarnya?',
             date: '20 Oktober 2023',
-            title: 'Card Title 2',
-            description: 'This is the description for Card 2',
-            image: '/images/istockphoto-91633822-612x612.jpg'
+            description: 'Dari berita yang saya dapatkan menurut warga Desa Fontaine archon fontaine yang sebenarnya adalah...',
+            image: '/images/fontaine.jpg'
         },
         {
-            title: 'Card Title 1',
+            title: 'Furina De Fontaine',
             date: '20 Oktober 2023',
-            description: 'This is the description for Card 1',
-            image: '/images/cimicimi.jpg'
+            description: 'Furina berkata: "Satu kebohongan selalu mengikuti kebohongan yang lain, sehingga "keadilan" pasti menunggu di akhir."',
+            image: '/images/fontaine gi.jpg'
         },
         {
+            title: 'Bangunan di Desa Fontaine',
             date: '20 Oktober 2023',
-            title: 'Card Title 2',
-            description: 'This is the description for Card 2',
-            image: '/images/istockphoto-91633822-612x612.jpg'
+            description: 'konstruksi bangunan di Fontaine mengadopsi desain klasik bergaya Eropa dan hadir dengan beberapa bangunan publik utama macam teater Opera Epiclese, pengadilan The Court of Fontaine, dan masih banyak lagi.',
+            image: '/images/fonten gi.jpg'
         },
     ];
 
@@ -76,7 +77,7 @@ function Artikel() {
             <IonContent>
                 <div className={Styles.container}>
                     <div className={Styles.title}>
-                        <h1>Berita dan Pengumuman</h1>
+                        <h1>Kabar Terbaru</h1>
                     </div>
                     <SearchBar onInput={handleInput}>Search Bar</SearchBar>
                     <div className={Styles.responsive}>
@@ -94,6 +95,7 @@ function Artikel() {
                         ))}
                     </div>
                 </div>
+            <Footer />
             </IonContent>
         </IonPage >
     );
