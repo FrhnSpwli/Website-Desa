@@ -12,21 +12,46 @@
 }
 
 .responsive {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Mengatur 2 kartu dalam satu baris */
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  gap: 10px;
+  padding: 10px;
+}
+.ion-card-row{
+  display: flex;
+  flex-direction: row;
+}
+
+.ion-card-row ion-card{
+  flex: 1;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.card{
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.cardContent{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .image {
-  height: 400px;
+  margin: 20px;
+  max-width: 500px;
   object-fit: cover;
+  margin-right:10px;
+  height: 400px;
 }
 
-@media (max-width: 768px) {
-  .responsive {
-    grid-template-columns: repeat(
-      1,
-      1fr
-    ); /* Ketika lebar maksimum 768px, kembali ke 1 kartu dalam satu baris */
-  }
+.desc{
+  flex: 1;
+  margin: 30px;
+  justify-content: center;
+  text-align: left;
 }

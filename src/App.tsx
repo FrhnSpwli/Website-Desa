@@ -10,6 +10,7 @@ import Login from './pages/Login';
 import Settings from './pages/Settings';
 import notFound from './pages/notFound';
 import Product from './pages/product';
+import Pembangunan from './pages/pembangunan';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -44,6 +45,7 @@ const App: React.FC = () => (
         <Route path="/login" component={Login} />
         <Route path="/landing" component={Landing} />
         <Route path="/product" component={Product} />
+        <Route path="/pembangunan" component={Pembangunan} />
         <Route exact path="/" render={() => <Redirect to="/home" />} />
         <Route component={notFound} />
       </IonRouterOutlet>
