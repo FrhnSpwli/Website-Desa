@@ -7,6 +7,7 @@ import Pict1 from '/images/fontaine genim.jpg'
 import Pict2 from '/images/fonten gi.jpg'
 import Pict3 from '/images/fontaine.jpg'
 import Pict4 from '/images/fontaine gi.jpg'
+import Button from '../components/atoms/button';
 
 const Landing: React.FC = () => {
   return (
