@@ -6,6 +6,10 @@
   padding: 16px;
 }
 
+.nav {
+  padding: 4px 16px;
+}
+
 .box {
   display: flex;
   align-items: center;
@@ -46,7 +50,8 @@
 }
 
 .item:hover {
-  border: 2px solid var(--ion-color-primary);
+  /* bold */
+  font-weight: 600;
 }
 
 .item:hover a {

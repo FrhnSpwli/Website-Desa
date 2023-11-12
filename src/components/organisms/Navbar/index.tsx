@@ -77,7 +77,7 @@ const Navbar = ({ children }: NavbarProps) => {
           </div>
         </IonContent>
       </IonMenu >
-      <IonHeader id="main-content" class='ion-padding-horizontal'>
+      <IonHeader id="main-content" className={Styles.nav}>
         <div className={Styles.menu}>
           <IonTitle class='ion-no-padding'>{children}</IonTitle>
           <div className={Styles.content}>
