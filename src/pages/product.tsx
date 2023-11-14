@@ -1,13 +1,13 @@
 import Styles from '../styles/Product.module.css';
-import { IonContent, IonPage, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonCardSubtitle, IonImg } from '@ionic/react';
+import { IonContent, IonPage, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonCardSubtitle, IonImg, IonSearchbar } from '@ionic/react';
 import Navbar from '../components/organisms/Navbar';
 import Footer from '../components/organisms/Footer';
-import SearchBar from '../components/molecules/searchBar';
 import Pic1 from '/images/cimicimi.jpg'
 import Pic2 from '/images/pastel asap.jpg'
 import Pic3 from '/images/telur asin.jpg'
 import Pic4 from '/images/sedang_1668397058_marning.jpg'
 import { Style } from '@capacitor/status-bar';
+import SearchBar from '../components/molecules/searchBar';
 
 const Product = () => {
 
