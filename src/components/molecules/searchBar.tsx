@@ -4,7 +4,7 @@ import Styles from './searchBar.module.css';
 
 interface SearchBarProps {
     children: ReactNode;
-    onInput: (event: CustomEvent<SearchbarInputEventDetail>) => void;
+    onInput?: (event: CustomEvent<SearchbarInputEventDetail>) => void;
 }
 
 const SearchBar = ({ children, onInput }: SearchBarProps) => {
