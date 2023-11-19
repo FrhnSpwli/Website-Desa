@@ -4,7 +4,6 @@ import { IonReactRouter } from '@ionic/react-router';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Artikel from './pages/Artikel';
-import Home from './pages/Home';
 import Landing from './pages/Landing';
 import Login from './pages/Login';
 import Settings from './pages/Settings';
