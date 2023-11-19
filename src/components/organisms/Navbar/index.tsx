@@ -23,13 +23,13 @@ const Navbar = ({ children }: NavbarProps) => {
     // Your admin popup content goes here
     <div className={Styles.adminPopup}>
       <div>
-      <IonItem href='/settings'>
+      <IonItem href='/kelembagaan'>
         <IonLabel>Administrasi Kelembagaan</IonLabel>
       </IonItem>
-      <IonItem href='/settings'>
+      <IonItem href='/pembangunan'>
         <IonLabel>Administrasi Pembangunan</IonLabel>
       </IonItem>
-      <IonItem href='/settings'>
+      <IonItem href='/penduduk'>
         <IonLabel>Administrasi Penduduk</IonLabel>
       </IonItem>
       </div>
