@@ -5,6 +5,7 @@ import {
   IonCardContent,
   IonCardHeader,
   IonCardTitle,
+  IonPage,
   IonItem,
 } from "@ionic/react";
 import Footer from "../components/organisms/Footer";
@@ -15,7 +16,7 @@ import Styles from "../styles/About.module.css";
 
 const About: React.FC = () => {
   return (
-    <>
+    <IonPage>
       <Navbar>Profile</Navbar>
       <IonContent>
         <div className={Styles.hero}>
@@ -23,7 +24,7 @@ const About: React.FC = () => {
             <h4>Hello, Welcome to</h4>
             <h1>Teyvat</h1>
             <h3>a village full of culture and natural panorama</h3>
-            <Button shape="round">Jelajahi Komuditas</Button>
+            <Button shape="round" path="/product">Jelajahi Komuditas</Button>
           </div>
         </div>
 
@@ -142,7 +143,7 @@ const About: React.FC = () => {
         </section>
       </IonContent>
       <Footer />
-    </>
+    </IonPage>
   );
 };
 

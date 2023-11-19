@@ -7,11 +7,12 @@ import {
   useMaterialReactTable,
 } from 'material-react-table';
 import { IonContent, IonPage } from '@ionic/react';
+import Navbar from '../components/organisms/Navbar';
 
 const data = [
   {
     no: '1',
-    nama_proyek:'PROGRAM PEMBANGUNAN, PENGEMBANGAN DAN PEMELIHARAAN SARANA /PRASARANA LINGKUNGAN',
+    nama_proyek: 'PROGRAM PEMBANGUNAN, PENGEMBANGAN DAN PEMELIHARAAN SARANA /PRASARANA LINGKUNGAN',
     volume: '800 m2',
     biaya: '900 jt',
     lokasi: 'Desa Panaikang, Kabupaten Gowa',
@@ -19,7 +20,7 @@ const data = [
   },
   {
     no: '2',
-    nama_proyek:'PROGRAM PEMBANGUNAN DAN PENGEMBANGAN SARANA DAN PRASARANA FISIK PERKANTORAN, KESEHATAN, PENDIDIKAN DAN SOSIAL',
+    nama_proyek: 'PROGRAM PEMBANGUNAN DAN PENGEMBANGAN SARANA DAN PRASARANA FISIK PERKANTORAN, KESEHATAN, PENDIDIKAN DAN SOSIAL',
     volume: '700 m2',
     biaya: '600jt',
     lokasi: 'Desa Panaikang, Kabupaten Gowa',
@@ -27,7 +28,7 @@ const data = [
   },
   {
     no: '3',
-    nama_proyek:'KEG. PEMB. SARANA / PRASARANA PERKANTORAN DAN KESEHATAN',
+    nama_proyek: 'KEG. PEMB. SARANA / PRASARANA PERKANTORAN DAN KESEHATAN',
     volume: '900 m2',
     biaya: '670jt',
     lokasi: 'Desa Panaikang, Kabupaten Gowa',
@@ -35,7 +36,7 @@ const data = [
   },
   {
     no: '4',
-    nama_proyek:'KEGIATAN PEMBANGUNAN SARANA PRASARANA KESENIAN DAN KEBUDAYAAN',
+    nama_proyek: 'KEGIATAN PEMBANGUNAN SARANA PRASARANA KESENIAN DAN KEBUDAYAAN',
     volume: '500 m2',
     biaya: '160jt',
     lokasi: 'Desa Panaikang, Kabupaten Gowa',
@@ -43,7 +44,7 @@ const data = [
   },
   {
     no: '5',
-    nama_proyek:'PENGADAAN, PEMBANGUNAN, PENGEMBANGAN DAN PEMELIHARAAN SARANA EKONOMI',
+    nama_proyek: 'PENGADAAN, PEMBANGUNAN, PENGEMBANGAN DAN PEMELIHARAAN SARANA EKONOMI',
     volume: '700 m2',
     biaya: '750jt',
     lokasi: 'Desa Panaikang, Kabupaten Gowa',
@@ -60,9 +61,9 @@ const Example = () => {
 
   const columns = useMemo(
     () => [
-      
+
       {
-        accessorKey: 'no', 
+        accessorKey: 'no',
         header: 'No',
         size: 10,
       },
@@ -72,7 +73,7 @@ const Example = () => {
         size: 500,
       },
       {
-        accessorKey: 'volume', 
+        accessorKey: 'volume',
         header: 'Volume',
         size: 100,
       },
@@ -128,20 +129,21 @@ const Example = () => {
   return (
     <IonPage>
       <IonContent>
-        <div className={Styles.nav}>
+        {/* <div className={Styles.nav}>
           <p>Administrasi Pembangunan <br></br>
             Buku Inventaris Hasil-Hasil Pembangunan</p>
           <button className={Styles.printbutton}>Print</button>
-        </div>
+        </div> */}
+        <Navbar>Administrasi Pembangunan Buku <br></br>Inventaris Hasil-Hasil Pembangungan</Navbar>
         <div className={Styles.table}>
           <MaterialReactTable table={table} />
         </div>
       </IonContent>
       <Footer />
     </IonPage>
-    
+
   );
-  
+
 };
 
 export default Example;

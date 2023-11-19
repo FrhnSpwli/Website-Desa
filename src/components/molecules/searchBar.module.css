@@ -1,10 +1,11 @@
-ion-searchbar {
-    --color: var(--ion-color-dark);
-    --placeholder-color: var(--ion-color-medium);
-    --background: var(--ion-color-light);
-    --box-shadow: none;
-    --border-radius: 24px;
-    --icon-color: var(--ion-color-primary);
-    --clear-button-color: var(--ion-color-primary);
-    text-align: left;
+.searchBar {
+  width: 50%;
+  height: auto;
+  padding: 16px;
+}
+
+@media (max-width: 768px) {
+  .searchBar {
+    width: 100%;
   }
+}
