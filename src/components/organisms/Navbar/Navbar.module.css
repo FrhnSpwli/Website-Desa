@@ -52,6 +52,7 @@
 
 .item:hover a {
   color: var(--ion-color-primary);
+  cursor: pointer;
 }
 
 .item a:before {
@@ -87,6 +88,45 @@
 .button {
   display: flex;
   flex-direction: column;
+}
+
+.accordionItem {
+  display: flex;
+  flex-direction: column;
+  padding-left: 24px;
+}
+
+.adminPopup {
+  position: absolute;
+  top: 72px;
+  right: 128px;
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.adminPopup button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.adminPopupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
 }
 
 @media (max-width: 768px) {
