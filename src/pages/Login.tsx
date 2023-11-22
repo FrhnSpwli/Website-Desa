@@ -12,7 +12,6 @@ function login() {
           <div className={Styles.left}>
             <p>Selamat Datang di Desa</p>
             <h1>Fontaine</h1>
-            <p>Sign in untuk lanjut ke akun Anda</p>
           </div>
           <div className={Styles.right}>
             <div className={Styles.content}>
@@ -36,7 +35,7 @@ function login() {
                 <Input type="password">Password</Input>
               </div>
               <div className={Styles.keepLogin}>
-                <IonCheckbox labelPlacement="end">
+                <IonCheckbox labelPlacement="end" justify="start">
                   Keep me signed in until I sign out
                 </IonCheckbox>
                 <a href="#">Forgot Password ?</a>
