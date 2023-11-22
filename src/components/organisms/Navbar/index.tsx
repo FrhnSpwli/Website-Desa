@@ -1,8 +1,9 @@
 import { ReactNode, useState, useEffect } from 'react';
 import { IonButtons, IonContent, IonHeader, IonMenu, IonMenuButton, IonTitle, IonItem, IonLabel, IonIcon, IonAccordion, IonAccordionGroup } from '@ionic/react';
-import { call, open, document, home, settings, cube, help } from 'ionicons/icons';
+import { call, open, document, home, settings, cube, help, people, peopleCircle, peopleCircleOutline, informationCircle, build } from 'ionicons/icons';
 import Styles from './Navbar.module.css'
 import Button from '../../atoms/button';
+import { HolidayVillageTwoTone } from '@mui/icons-material';
 
 interface NavbarProps {
   children: ReactNode;
@@ -99,13 +100,18 @@ const Navbar = ({ children }: NavbarProps) => {
               <IonAccordionGroup>
                 <IonAccordion value="first">
                   <IonItem slot="header">
-                    <IonIcon icon={settings} slot="start" />
-                    <IonLabel>Settings</IonLabel>
+                    <IonIcon icon={people} slot="start" />
+                    <IonLabel>Administrasi</IonLabel>
                   </IonItem>
                   <div className={Styles.accordionItem} slot="content">
-                    <IonItem href='/settings'>
-                      <IonIcon icon={settings} slot="start" />
-                      <IonLabel>Settings</IonLabel>
+                    <IonItem href='/penduduk'>
+                      <IonLabel>Penduduk</IonLabel>
+                    </IonItem>
+                    <IonItem href='/kelembagaan'>
+                      <IonLabel>Kelembagaan</IonLabel>
+                    </IonItem>
+                    <IonItem href='/pembangunan'>
+                      <IonLabel>Pembangunan</IonLabel>
                     </IonItem>
                   </div>
                 </IonAccordion>
