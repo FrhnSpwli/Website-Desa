@@ -52,7 +52,7 @@ const Navbar = ({ children }: NavbarProps) => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 768);
+      setIsSmallScreen(window.innerWidth <= 920);
     };
 
     window.addEventListener('resize', handleResize);
