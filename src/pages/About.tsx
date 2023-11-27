@@ -141,8 +141,8 @@ const About: React.FC = () => {
             <img src="https://i.pinimg.com/564x/86/5f/3b/865f3b3d4da5a6615c580a275d84ab37.jpg" />
           </div>
         </section>
-      </IonContent>
       <Footer />
+      </IonContent>
     </IonPage>
   );
 };
