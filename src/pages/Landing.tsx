@@ -130,8 +130,8 @@ const Landing: React.FC = () => {
             </div>
           </div>
         </div>
-      </IonContent>
       <Footer />
+      </IonContent>
     </IonPage>
   );
 };
