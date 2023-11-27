@@ -79,6 +79,17 @@ const data: Person[] = [
     gender: "Woman",
     religion: "Christian",
   },
+  {
+    nomor: "6",
+    name: {
+      firstName: "Kokomi",
+      lastName: "Sangonomia",
+    },
+    address: "Inazuma",
+    email: "kokomi@gmail.com",
+    gender: "Woman",
+    religion: "Christian",
+  },
 ];
 
 const Example = () => {
