@@ -3,10 +3,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 48px;
+  gap: 24px;
 }
 
-.title{
-  padding: 20px;
+.title {
   text-align: center;
 }
 
@@ -54,4 +55,3 @@
   justify-content: center;
   text-align: left;
 }
-

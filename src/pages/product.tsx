@@ -1,12 +1,13 @@
 import Styles from '../styles/Product.module.css';
-import { IonContent, IonPage, IonHeader, IonTitle, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonCardSubtitle, IonThumbnail, IonImg } from '@ionic/react';
+import { IonContent, IonPage, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonCardSubtitle, IonImg, IonSearchbar } from '@ionic/react';
 import Navbar from '../components/organisms/Navbar';
 import Footer from '../components/organisms/Footer';
-import Pic1 from '../../assets/images/cimicimi.jpg'
-import Pic2 from '../../assets/images/pastel asap.jpg'
-import Pic3 from '../../assets/images/telur asin.jpg'
-import Pic4 from '../../assets/images/sedang_1668397058_marning.jpg'
+import Pic1 from '/images/cimicimi.jpg'
+import Pic2 from '/images/pastel asap.jpg'
+import Pic3 from '/images/telur asin.jpg'
+import Pic4 from '/images/sedang_1668397058_marning.jpg'
 import { Style } from '@capacitor/status-bar';
+import SearchBar from '../components/molecules/searchBar';
 
 const Product = () => {
 
@@ -15,10 +16,10 @@ const Product = () => {
             <Navbar>Product</Navbar>
             <IonContent>
                 <div className={Styles.container}>
-                    {/* for the title of the page */}
                     <div className={Styles.title}>
                         <h1>Produk Unggulan Desa</h1>
                     </div>
+                    <SearchBar>Search Bar</SearchBar>
                     <div className={Styles.responsive}>
                         <IonCard className={Styles.card}>
                           <div className={Styles.cardContent}>

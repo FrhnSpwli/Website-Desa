@@ -1,14 +1,26 @@
-import { ReactNode } from 'react';
-import { IonSearchbar } from '@ionic/react';
+import React, { ReactNode } from 'react';
+import { IonSearchbar, SearchbarInputEventDetail } from '@ionic/react';
+import Styles from './searchBar.module.css';
 
 interface SearchBarProps {
     children: ReactNode;
+    onInput?: (event: CustomEvent<SearchbarInputEventDetail>) => void;
 }
 
-const SearchBar = ({ children }: SearchBarProps) => {
-
+const SearchBar = ({ children, onInput }: SearchBarProps) => {
     return (
-        <IonSearchbar placeholder={`${children}`} mode='ios' animated={true}></IonSearchbar>
+        <div className={Styles.searchBar}>
+            <IonSearchbar
+                debounce={1000}
+                placeholder={`${children}`}
+                mode='ios'
+                animated={true}
+                color="light"
+                spellCheck={true}
+                onIonInput={onInput}
+            ></IonSearchbar>
+        </div>
     );
 }
+
 export default SearchBar;
