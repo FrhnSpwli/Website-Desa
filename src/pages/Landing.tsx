@@ -1,30 +1,12 @@
-import {
-  IonContent,
-  IonHeader,
-  IonPage,
-  IonTitle,
-  IonToolbar,
-  IonMenu,
-  IonMenuButton,
-  IonButton,
-  IonImg,
-  IonText,
-  IonCard,
-  IonCardHeader,
-  IonCardSubtitle,
-  IonCardContent,
-  IonCardTitle,
-} from "@ionic/react";
-import Footer from "../components/organisms/Footer";
-import Navbar from "../components/organisms/Navbar";
-import Styles from "../styles/Landing.module.css";
-import Pic from "/images/Fontaine Genshin impact.jpg";
-import Pict1 from "/images/fontaine genim.jpg";
-import Pict2 from "/images/fonten gi.jpg";
-import Pict3 from "/images/fontaine.jpg";
-import Pict4 from "/images/fontaine gi.jpg";
-import Button from "../components/atoms/button";
-import { useEffect, useState } from "react";
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonMenu, IonMenuButton, IonButton, IonImg, IonText, IonCard, IonCardHeader, IonCardSubtitle, IonCardContent, IonCardTitle } from '@ionic/react';
+import Footer from '../components/organisms/Footer';
+import Navbar from '../components/organisms/Navbar';
+import Styles from '../styles/Landing.module.css';
+import Pic from '/images/Fontaine Genshin impact.jpg'
+import Pict1 from '/images/fontaine genim.jpg'
+import Pict2 from '/images/fonten gi.jpg'
+import Pict3 from '/images/fontaine.jpg'
+import Pict4 from '/images/fontaine gi.jpg'
 
 const Landing: React.FC = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
@@ -128,10 +110,9 @@ const Landing: React.FC = () => {
                 </IonCard>
               </div>
             </div>
-          </div>
-        </div>
-      <Footer />
-      </IonContent>
+          </div>  
+        </IonContent>
+        <Footer />
     </IonPage>
   );
 };
