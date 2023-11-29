@@ -108,11 +108,12 @@ const Landing: React.FC = () => {
                   <IonImg src={Pict5}/>
                     <IonCardHeader>
                         <IonCardSubtitle>Desa Fontaine</IonCardSubtitle>
-                        <IonCardTitle>Wilayah Baru?</IonCardTitle>
+                        <IonCardTitle>Freminet</IonCardTitle>
                         </IonCardHeader>
                         <IonCardContent>
-                        Fontaine telah memiliki beberapa rumor dan bocoran 
-                        yang mengisyaratkan apa yang diharapkan dari wilayah baru tersebut.
+                        Bagi Freminet, suara mesin yang sedang menyala bisa mewakili banyak hal.
+                        Suara ini bisa menjadi pendamping Freminet saat sedang meneliti sebuah mesin seorang diri, 
+                        bisa jadi peringatan untuk bertarung, atau bisa juga menjadi lagu pengantar tidurnya.
                         </IonCardContent>
                   </IonCard>
 
@@ -120,11 +121,11 @@ const Landing: React.FC = () => {
                   <IonImg src={Pict6}/>
                     <IonCardHeader>
                         <IonCardSubtitle>Desa Fontaine</IonCardSubtitle>
-                        <IonCardTitle>Siapa Archon Fontaine Sebenarnya?</IonCardTitle>
+                        <IonCardTitle>Map Fontaine</IonCardTitle>
                         </IonCardHeader>
                         <IonCardContent>
-                            Dari berita yang saya dapatkan menurut warga Desa Fontaine 
-                            archon fontaine yang sebenarnya adalah...
+                        Fontaine juga terdiri dari dua area, yaitu area darat dan area bawah laut (underwater).
+                        Secara geografis, Fontaine sendiri terletak di sebelah timur laut padang pasir Sumeru.
                         </IonCardContent>
                   </IonCard>
 
@@ -135,8 +136,9 @@ const Landing: React.FC = () => {
                         <IonCardTitle>Furina Focalor</IonCardTitle>
                         </IonCardHeader>
                         <IonCardContent>
-                          Furina berkata: "Satu kebohongan selalu mengikuti kebohongan yang lain, 
-                          sehingga "keadilan" pasti menunggu di akhir."
+                        "Di dunia nyata, kita semua pernah melihat bunga yang layu, terjebak dalam hujan lebat, dan mendengar tentang kapal yang hilang tanpa jejak.
+                        Tapi terlepas dari semua itu, setidaknya aku masih bisa percaya akan satu hal.
+                        Bahwa setidaknya di atas panggung, kita bisa mengendalikan takdir kita sendiri."
                         </IonCardContent>
                   </IonCard>
 
@@ -144,12 +146,11 @@ const Landing: React.FC = () => {
                   <IonImg src={Pict8}/>
                     <IonCardHeader>
                         <IonCardSubtitle>Desa Fontaine</IonCardSubtitle>
-                        <IonCardTitle>Bangunan di Desa Fontaine</IonCardTitle>
+                        <IonCardTitle>Neuvillette Hakim Agung Fontaine</IonCardTitle>
                         </IonCardHeader>
                         <IonCardContent>
-                        konstruksi bangunan di Fontaine mengadopsi desain klasik bergaya Eropa dan hadir 
-                        dengan beberapa bangunan publik utama macam teater Opera Epiclese, pengadilan 
-                        The Court of Fontaine, dan masih banyak lagi.
+                        Neuvillette sedang berjalan-jalan di daerah fontaine
+                        untuk refereshing sebelum menjalani tugasnya sebagai hakim.
                         </IonCardContent>
                   </IonCard>
               </div>
