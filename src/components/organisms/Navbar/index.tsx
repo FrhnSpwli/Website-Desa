@@ -1,14 +1,42 @@
 import { ReactNode, useState, useEffect } from 'react';
-import { IonButtons, IonContent, IonHeader, IonMenu, IonMenuButton, IonTitle, IonItem, IonLabel, IonIcon } from '@ionic/react';
-import { call, open, document, home, settings, cube } from 'ionicons/icons';
+import { IonButtons, IonContent, IonHeader, IonMenu, IonMenuButton, IonTitle, IonItem, IonLabel, IonIcon, IonAccordion, IonAccordionGroup } from '@ionic/react';
+import { call, open, document, home, settings, cube, help, people, peopleCircle, peopleCircleOutline, informationCircle, build } from 'ionicons/icons';
 import Styles from './Navbar.module.css'
 import Button from '../../atoms/button';
+import { HolidayVillageTwoTone } from '@mui/icons-material';
 
 interface NavbarProps {
   children: ReactNode;
 }
 
 const Navbar = ({ children }: NavbarProps) => {
+  const [isAdminPopupVisible, setAdminPopupVisible] = useState(false);
+
+  const showAdminPopup = () => {
+    setAdminPopupVisible(true);
+  };
+
+  const hideAdminPopup = () => {
+    setAdminPopupVisible(false);
+  };
+
+  const adminPopupContent = (
+    // Your admin popup content goes here
+    <div className={Styles.adminPopup}>
+      <div>
+      <IonItem href='/kelembagaan'>
+        <IonLabel>Administrasi Kelembagaan</IonLabel>
+      </IonItem>
+      <IonItem href='/pembangunan'>
+        <IonLabel>Administrasi Pembangunan</IonLabel>
+      </IonItem>
+      <IonItem href='/penduduk'>
+        <IonLabel>Administrasi Penduduk</IonLabel>
+      </IonItem>
+      </div>
+      <button onClick={hideAdminPopup}>Close</button>
+    </div>
+  );
 
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768);
 
@@ -24,7 +52,7 @@ const Navbar = ({ children }: NavbarProps) => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 768);
+      setIsSmallScreen(window.innerWidth <= 920);
     };
 
     window.addEventListener('resize', handleResize);
@@ -69,10 +97,28 @@ const Navbar = ({ children }: NavbarProps) => {
                 <IonIcon icon={settings} slot="start" />
                 <IonLabel>Settings</IonLabel>
               </IonItem>
+              <IonAccordionGroup>
+                <IonAccordion value="first">
+                  <IonItem slot="header">
+                    <IonIcon icon={people} slot="start" />
+                    <IonLabel>Administrasi</IonLabel>
+                  </IonItem>
+                  <div className={Styles.accordionItem} slot="content">
+                    <IonItem href='/penduduk'>
+                      <IonLabel>Penduduk</IonLabel>
+                    </IonItem>
+                    <IonItem href='/kelembagaan'>
+                      <IonLabel>Kelembagaan</IonLabel>
+                    </IonItem>
+                    <IonItem href='/pembangunan'>
+                      <IonLabel>Pembangunan</IonLabel>
+                    </IonItem>
+                  </div>
+                </IonAccordion>
+              </IonAccordionGroup>
             </div>
             <div className={Styles.button}>
               <Button path='/login' fill='solid'>Login</Button>
-              {/* <Button path='/signup' fill='outline'>Sign Up</Button> */}
             </div>
           </div>
         </IonContent>
@@ -100,11 +146,14 @@ const Navbar = ({ children }: NavbarProps) => {
               <div className={`${Styles.item} ${isActive('/settings') ? Styles.active : ''}`}>
                 <a href='/settings'>Settings</a>
               </div>
+              <div className={`${Styles.item} ${isActive('/admin') ? Styles.active : ''}`} onClick={showAdminPopup}>
+                <a>Admin</a>
+              </div>
             </div>
             <div className={Styles.contentItem}>
               <Button path='/login' shape='round' fill='solid'>Login</Button>
-              {/* <Button path='/signup' fill='outline'>Sign Up</Button> */}
             </div>
+            {isAdminPopupVisible && adminPopupContent}
           </div>
           {isSmallScreen && (
             <IonButtons slot="end">

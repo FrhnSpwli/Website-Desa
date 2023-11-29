@@ -10,13 +10,13 @@
   width: 60%;
   display: flex;
   border-radius: 16px;
-  border: 3px #414d62 solid;
+  border: 3px var(--ion-color-light) solid;
 }
 
 .content {
   font-weight: 100;
-  text-shadow: #2d2f32;
-  border: #2d2f32;
+  text-shadow: var(--ion-color-light);
+  border: var(--ion-color-light);
 }
 
 .left {
@@ -30,23 +30,18 @@
   justify-content: center;
   align-items: center;
   color: rgb(255, 255, 255);
-  justify-content: space-between;
 }
 
 .left p {
   font-size: 24px;
   font-weight: 600;
   text-align: center;
-  /* shadow */
-  text-shadow: 2px 2px #2d2f32;
 }
 
 .left h1 {
   font-size: 72px;
   font-weight: 700;
   text-align: center;
-  /* shadow */
-  text-shadow: 2px 2px #2d2f32;
 }
 
 .right {
@@ -57,8 +52,6 @@
   border-radius: 0 16px 16px 0;
   justify-content: center;
   padding: 24px;
-
-  /* border: 3px #3880ff solid; */
 }
 
 .content {
@@ -73,7 +66,7 @@
 .content h1 {
   font-size: 44px;
   font-weight: 600;
-  color: #3880ff;
+  color: var(--ion-color-primary);
 
 }
 
@@ -82,11 +75,10 @@
   align-items: center;
   gap: 16px;
   width: 100%;
-  background-color: white;
+  background-color: var(--ion-color-light);
   padding: 4px 16px;
   border-radius: 8px;
   border-radius: 16px;
-  border: 1px #3881ff solid;
 }
 
 .itemIcon {
@@ -109,3 +101,79 @@
   gap: 60px;
   font-size: medium;
 }
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  .left {
+    width: 50%;
+  }
+
+  .right {
+    width: 50%;
+  }
+
+  .content h1 {
+    font-size: 32px;
+  }
+
+  .left h1 {
+    font-size: 48px;
+  }
+
+  .left p {
+    font-size: 16px;
+  }
+
+  .item {
+    padding: 4px 8px;
+  }
+
+  .itemIcon {
+    font-size: large;
+  }
+
+  .keepLogin {
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    width: 95%;
+  }
+
+  .left {
+    display: none;
+  }
+
+  .right {
+    width: 100%;
+    border-radius: 0 0 16px 16px;
+  }
+
+  .content h1 {
+    font-size: 24px;
+  }
+
+  .item {
+    padding: 4px 8px;
+  }
+
+  .itemIcon {
+    font-size: large;
+  }
+
+  .keepLogin {
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+

@@ -32,29 +32,17 @@ function Artikel() {
             image: '/images/fonten gi.jpg'
         },
         {
-            title: 'Wilayah Baru?',
+            title: 'What do the people of Fontaine think Neuvillette is?',
             date: '20 Oktober 2023',
-            description: 'Fontaine telah memiliki beberapa rumor dan bocoran yang mengisyaratkan apa yang diharapkan dari wilayah baru tersebut.',
-            image: '/images/fontaine genim.jpg'
+            description: 'The people of Fontaine are very concerned about the existence of Neuvillette, because they are afraid that Neuvillette will take over the Fontaine region.',
+            image: '/images/neuvilatte.webp'
         },
         {
-            title: 'Siapa Archon Fontaine Sebenarnya?',
+            title: 'Who is Navia?',
             date: '20 Oktober 2023',
-            description: 'Dari berita yang saya dapatkan menurut warga Desa Fontaine archon fontaine yang sebenarnya adalah...',
-            image: '/images/fontaine.jpg'
-        },
-        {
-            title: 'Furina De Fontaine',
-            date: '20 Oktober 2023',
-            description: 'Furina berkata: "Satu kebohongan selalu mengikuti kebohongan yang lain, sehingga "keadilan" pasti menunggu di akhir."',
-            image: '/images/fontaine gi.jpg'
-        },
-        {
-            title: 'Bangunan di Desa Fontaine',
-            date: '20 Oktober 2023',
-            description: 'konstruksi bangunan di Fontaine mengadopsi desain klasik bergaya Eropa dan hadir dengan beberapa bangunan publik utama macam teater Opera Epiclese, pengadilan The Court of Fontaine, dan masih banyak lagi.',
-            image: '/images/fonten gi.jpg'
-        },
+            description: 'Judging from her appearance, theres no doubt that Navia is the very picture of a Fontainian lady. She likes to accoutre herself in ornate dresses and fine hats, and carries with her a ribboned umbrella encrusted with jewels.',
+            image: '/images/navia.webp'
+        }
     ];
 
     const [results, setResults] = useState([...data]);
