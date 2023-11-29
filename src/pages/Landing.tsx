@@ -60,54 +60,107 @@ const Landing: React.FC = () => {
             <div className={Styles.cardTitle}>
               <div className={Styles.cardResponsive}>
                 <IonCard>
-                  <IonImg src={Pict1} />
-                  <IonCardHeader>
-                    <IonCardSubtitle>Desa Fontaine</IonCardSubtitle>
-                    <IonCardTitle>Wilayah Baru?</IonCardTitle>
-                  </IonCardHeader>
-                  <IonCardContent>
-                    Fontaine telah memiliki beberapa rumor dan bocoran yang
-                    mengisyaratkan apa yang diharapkan dari wilayah baru
-                    tersebut.
-                  </IonCardContent>
-                </IonCard>
-                <IonCard>
-                  <IonImg src={Pict2} />
-                  <IonCardHeader>
-                    <IonCardSubtitle>Desa Fontaine</IonCardSubtitle>
-                    <IonCardTitle>
-                      Siapa Archon Fontaine Sebenarnya?
-                    </IonCardTitle>
-                  </IonCardHeader>
-                  <IonCardContent>
-                    Dari berita yang saya dapatkan menurut warga Desa Fontaine
-                    archon fontaine yang sebenarnya adalah...
-                  </IonCardContent>
-                </IonCard>
-                <IonCard>
-                  <IonImg src={Pict3} />
-                  <IonCardHeader>
-                    <IonCardSubtitle>Desa Fontaine</IonCardSubtitle>
-                    <IonCardTitle>Furina Focalor</IonCardTitle>
-                  </IonCardHeader>
-                  <IonCardContent>
-                    Furina berkata: "Satu kebohongan selalu mengikuti kebohongan
-                    yang lain, sehingga "keadilan" pasti menunggu di akhir."
-                  </IonCardContent>
-                </IonCard>
-                <IonCard>
-                  <IonImg src={Pict4} />
-                  <IonCardHeader>
-                    <IonCardSubtitle>Desa Fontaine</IonCardSubtitle>
-                    <IonCardTitle>Bangunan di Desa Fontaine</IonCardTitle>
-                  </IonCardHeader>
-                  <IonCardContent>
-                    konstruksi bangunan di Fontaine mengadopsi desain klasik
-                    bergaya Eropa dan hadir dengan beberapa bangunan publik
-                    utama macam teater Opera Epiclese, pengadilan The Court of
-                    Fontaine, dan masih banyak lagi.
-                  </IonCardContent>
-                </IonCard>
+                  <IonImg src={Pict1}/>
+                    <IonCardHeader>
+                        <IonCardSubtitle>Desa Fontaine</IonCardSubtitle>
+                        <IonCardTitle>Wilayah Baru?</IonCardTitle>
+                        </IonCardHeader>
+                        <IonCardContent>
+                        Fontaine telah memiliki beberapa rumor dan bocoran 
+                        yang mengisyaratkan apa yang diharapkan dari wilayah baru tersebut.
+                        </IonCardContent>
+                  </IonCard>
+                  <IonCard>
+                  <IonImg src={Pict2}/>
+                    <IonCardHeader>
+                        <IonCardSubtitle>Desa Fontaine</IonCardSubtitle>
+                        <IonCardTitle>Siapa Archon Fontaine Sebenarnya?</IonCardTitle>
+                        </IonCardHeader>
+                        <IonCardContent>
+                            Dari berita yang saya dapatkan menurut warga Desa Fontaine 
+                            archon fontaine yang sebenarnya adalah...
+                        </IonCardContent>
+                  </IonCard>
+                  <IonCard>
+                  <IonImg src={Pict3}/>
+                    <IonCardHeader>
+                        <IonCardSubtitle>Desa Fontaine</IonCardSubtitle>
+                        <IonCardTitle>Furina Focalor</IonCardTitle>
+                        </IonCardHeader>
+                        <IonCardContent>
+                          Furina berkata: "Satu kebohongan selalu mengikuti kebohongan yang lain, 
+                          sehingga "keadilan" pasti menunggu di akhir."
+                        </IonCardContent>
+                  </IonCard>
+                  <IonCard>
+                  <IonImg src={Pict4}/>
+                    <IonCardHeader>
+                        <IonCardSubtitle>Desa Fontaine</IonCardSubtitle>
+                        <IonCardTitle>Bangunan di Desa Fontaine</IonCardTitle>
+                        </IonCardHeader>
+                        <IonCardContent>
+                        konstruksi bangunan di Fontaine mengadopsi desain klasik bergaya Eropa dan hadir 
+                        dengan beberapa bangunan publik utama macam teater Opera Epiclese, pengadilan 
+                        The Court of Fontaine, dan masih banyak lagi.
+                        </IonCardContent>
+                  </IonCard>
+              </div>
+            </div>
+          </div>  
+
+          <IonText className={Styles.cardText2}> Pengumuman </IonText> 
+          <div className={Styles.cardContainer2}>
+            <div className={Styles.cardTitle2}>
+             <div className={Styles.cardResponsive2}>
+
+                <IonCard>                
+                  <IonImg src={Pict5}/>
+                    <IonCardHeader>
+                        <IonCardSubtitle>Desa Fontaine</IonCardSubtitle>
+                        <IonCardTitle>Wilayah Baru?</IonCardTitle>
+                        </IonCardHeader>
+                        <IonCardContent>
+                        Fontaine telah memiliki beberapa rumor dan bocoran 
+                        yang mengisyaratkan apa yang diharapkan dari wilayah baru tersebut.
+                        </IonCardContent>
+                  </IonCard>
+
+                  <IonCard>
+                  <IonImg src={Pict6}/>
+                    <IonCardHeader>
+                        <IonCardSubtitle>Desa Fontaine</IonCardSubtitle>
+                        <IonCardTitle>Siapa Archon Fontaine Sebenarnya?</IonCardTitle>
+                        </IonCardHeader>
+                        <IonCardContent>
+                            Dari berita yang saya dapatkan menurut warga Desa Fontaine 
+                            archon fontaine yang sebenarnya adalah...
+                        </IonCardContent>
+                  </IonCard>
+
+                  <IonCard>
+                  <IonImg src={Pict7}/>
+                    <IonCardHeader>
+                        <IonCardSubtitle>Desa Fontaine</IonCardSubtitle>
+                        <IonCardTitle>Furina Focalor</IonCardTitle>
+                        </IonCardHeader>
+                        <IonCardContent>
+                          Furina berkata: "Satu kebohongan selalu mengikuti kebohongan yang lain, 
+                          sehingga "keadilan" pasti menunggu di akhir."
+                        </IonCardContent>
+                  </IonCard>
+
+                  <IonCard>
+                  <IonImg src={Pict8}/>
+                    <IonCardHeader>
+                        <IonCardSubtitle>Desa Fontaine</IonCardSubtitle>
+                        <IonCardTitle>Bangunan di Desa Fontaine</IonCardTitle>
+                        </IonCardHeader>
+                        <IonCardContent>
+                        konstruksi bangunan di Fontaine mengadopsi desain klasik bergaya Eropa dan hadir 
+                        dengan beberapa bangunan publik utama macam teater Opera Epiclese, pengadilan 
+                        The Court of Fontaine, dan masih banyak lagi.
+                        </IonCardContent>
+                  </IonCard>
               </div>
             </div>
           </div>  
