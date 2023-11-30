@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { IonInput, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonList, IonItem, IonLabel, IonToggle, IonSelect, IonSelectOption, IonRange, IonIcon } from '@ionic/react';
 import { chevronDownOutline, chevronUpOutline, personCircleOutline, notificationsOutline, colorPaletteOutline, lockClosedOutline, helpCircleOutline, informationCircleOutline } from 'ionicons/icons';
-import './Settings.css';
+import Styles from '../styles/Settings.module.css'
 import Navbar from '../components/organisms/Navbar';
 
 const Settings: React.FC = () => {
@@ -23,7 +23,7 @@ const Settings: React.FC = () => {
     switch (menuName) {
       case 'Account':
         return (
-          <div className='menuItems'>
+          <div className={Styles.menuItems}>
             <IonItem>
               <IonLabel position='floating'>Name:</IonLabel>
               <IonInput type='text' />
@@ -40,7 +40,7 @@ const Settings: React.FC = () => {
         );
       case 'Notifications':
         return (
-          <div className='menuItems'>
+          <div className={Styles.menuItems}>
             <IonItem>
               <IonLabel>Push Notifications:</IonLabel>
               <IonToggle slot='end' />
@@ -53,7 +53,7 @@ const Settings: React.FC = () => {
         );
       case 'Appearance':
         return (
-          <div className='menuItems'>
+          <div className={Styles.menuItems}>
             <IonItem>
               <IonLabel>Theme:</IonLabel>
               <IonSelect>
@@ -69,7 +69,7 @@ const Settings: React.FC = () => {
         );
       case 'Privacy':
         return (
-          <div className='menuItems'>
+          <div className={Styles.menuItems}>
             <IonItem>
               <IonLabel>Privacy Policy:</IonLabel>
               <a href='#'>View</a>
@@ -82,7 +82,7 @@ const Settings: React.FC = () => {
         );
       case 'Help':
         return (
-          <div className='menuItems'>
+          <div className={Styles.menuItems}>
             <IonItem>
               <IonLabel>FAQ:</IonLabel>
               <a href='#'>View</a>
@@ -95,7 +95,7 @@ const Settings: React.FC = () => {
         );
       case 'About':
         return (
-          <div className='menuItems'>
+          <div className={Styles.menuItems}>
             <IonItem>
               <IonLabel>Version:</IonLabel>
               <span>121211097</span>
@@ -134,11 +134,6 @@ const Settings: React.FC = () => {
     <IonPage>
       <Navbar>Settings</Navbar>
       <IonContent onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-        {showHeader && (
-          <div className='header' style={{ marginBottom: showFooter ? '50px' : '0' }}>
-            <h1>!!!UNDER DEVELOPMENT!!!</h1>
-          </div>
-        )}
         <IonList>
           <IonItem button className={activeMenu === 'Account' ? 'active' : ''} onClick={() => setActiveMenu(activeMenu === 'Account' ? '' : 'Account')}>
             <IonIcon slot='start' icon={personCircleOutline} />
@@ -177,11 +172,6 @@ const Settings: React.FC = () => {
           </IonItem>
           {activeMenu === 'About' && renderMenuItems('About')}
         </IonList>
-        {showFooter && (
-          <div className='footer' style={{ marginTop: showHeader ? '50px' : '0' }}>
-            !!!UNDER DEVELOPMENT!!!
-          </div>
-        )}
       </IonContent>
     </IonPage>
   );

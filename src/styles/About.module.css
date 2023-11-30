@@ -20,13 +20,13 @@ ion-toolbar {
 .content h1 {
     color: white;
     margin: 20px 0px 20px;
-    font-size: 75px;
+    font-size: 74px;
 }
 
 .content h3 {
     color: white;
     font-size: 25px;
-    margin-bottom: 50px;
+    margin-bottom: 49px;
 }
 
 .content h4 {
@@ -42,14 +42,76 @@ ion-toolbar {
 
 .about img {
     height: auto;
-    width: 430px;
+    width: 40%;
 }
 
 .about_text {
-    width: 550px;
+    width: 50%;
 }
 
 .main {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about_text h2 {
+    font-size: 74px;
+    text-transform: capitalize;
+    margin-bottom: 21px;
+}
+
+.about_text h5 {
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin-bottom: 24px;
+    text-transform: capitalize;
+}
+
+.about_text p {
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 44px;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.service_text h2 {
+    font-size: 48px;
+    text-transform: capitalize;
+    margin-bottom: 21px;
+}
+
+.responsive {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.chief {
+    width: 100%;
+    padding: 100px 0px;
+}
+
+.chief img {
+    height: auto;
+    width: 40%;
+}
+
+.chief_text {
+    width: 550px;
+}
+
+.profile {
     width: 1130px;
     max-width: 95%;
     margin: 0 auto;
@@ -58,22 +120,241 @@ ion-toolbar {
     justify-content: space-around;
 }
 
-.about_text h2 {
-    font-size: 75px;
+.chief_text h2 {
+    font-size: 74px;
     text-transform: capitalize;
-    margin-bottom: 20px;
+    margin-bottom: 21px;
 }
 
-.about_text h5 {
+.chief_text h5 {
     letter-spacing: 2px;
     font-size: 22px;
-    margin-bottom: 25px;
+    margin-bottom: 24px;
     text-transform: capitalize;
 }
 
-.about_text p {
+.chief_text p {
     letter-spacing: 1px;
     line-height: 28px;
     font-size: 18px;
-    margin-bottom: 45px;
+    margin-bottom: 44px;
+}
+
+/* media screen */
+@media screen and (max-width: 768px) {
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+    }
+
+    .content h1 {
+        color: white;
+        margin: 20px 0px 20px;
+        font-size: 50px;
+    }
+
+    .content h3 {
+        color: white;
+        font-size: 25px;
+        margin-bottom: 49px;
+    }
+
+    .content h4 {
+        color: white;
+        letter-spacing: 2px;
+        font-size: 22px;
+    }
+
+    .about {
+        width: 100%;
+        padding: 100px 0px;
+    }
+
+    .main img {
+        height: auto;
+        width: 430px;
+    }
+
+    .about_text {
+        width: 550px;
+    }
+
+    .main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .about_text h2 {
+        font-size: 74px;
+        text-transform: capitalize;
+        margin-bottom: 21px;
+    }
+
+    .about_text h5 {
+        letter-spacing: 2px;
+        font-size: 22px;
+        margin-bottom: 24px;
+        text-transform: capitalize;
+    }
+
+    .about_text p {
+        letter-spacing: 1px;
+        line-height: 28px;
+        font-size: 18px;
+        margin-bottom: 44px;
+    }
+
+    .service {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 0 24px;
+    }
+
+    .service_text h2 {
+        font-size: 48px;
+        text-transform: capitalize;
+        margin-bottom: 21px;
+    }
+
+    .responsive {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .chief {
+        width: 100%;
+        padding: 100px 0px;
+    }
+
+    .chief_text {
+        width: 50%;
+    }
+
+    .chief img {
+        height: auto;
+        width: 40%;
+    }
+}
+
+/* media screen */
+@media screen and (max-width: 480px) {
+    .content {
+        text-align: left;
+    }
+
+    .content h1 {
+        color: white;
+        margin: 20px 0px 20px;
+        font-size: 40px;
+    }
+
+    .content h3 {
+        color: white;
+        font-size: 25px;
+        margin-bottom: 49px;
+    }
+
+    .content h4 {
+        color: white;
+        letter-spacing: 2px;
+        font-size: 22px;
+    }
+
+    .about {
+        width: 100%;
+        padding: 100px 0px;
+    }
+
+    .about img {
+        height: auto;
+        width: 430px;
+    }
+
+    .about_text {
+        width: 100%;
+    }
+
+    .main {
+        width: 1130px;
+        max-width: 90%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+    .about_text h2 {
+        font-size: 74px;
+        text-transform: capitalize;
+        margin-bottom: 21px;
+    }
+
+    .about_text h5 {
+        letter-spacing: 2px;
+        font-size: 22px;
+        margin-bottom: 24px;
+        text-transform: capitalize;
+    }
+
+    .about_text p {
+        letter-spacing: 1px;
+        line-height: 28px;
+        font-size: 18px;
+        margin-bottom: 44px;
+    }
+
+    .service {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 0 24px;
+    }
+
+    .service_text h2 {
+        font-size: 48px;
+        text-transform: capitalize;
+        margin-bottom: 21px;
+    }
+
+    .responsive {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .chief {
+        width: 100%;
+        padding: 100px 0px;
+    }
+
+    .chief img {
+        height: auto;
+        width: 80%;
+    }
+
+    .chief_text {
+        width: 100%;
+        
+    }
+
+    .profile {
+        width: 1130px;
+        max-width: 95%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+    }
 }
