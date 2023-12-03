@@ -1,15 +1,24 @@
-import Styles from '../styles/Pembangunan.module.css';
-// import Navbar from '../components/organisms/Navbar';
+import Styles from '../styles/AdministrasiPembangunan.module.css';
 import Footer from '../components/organisms/Footer';
+import Navbar from '../components/organisms/Navbar';
 import { useMemo, useState } from 'react';
 import {
   MaterialReactTable,
   useMaterialReactTable,
+  type MRT_ColumnDef,
 } from 'material-react-table';
 import { IonContent, IonPage } from '@ionic/react';
-import Navbar from '../components/organisms/Navbar';
 
-const data = [
+type Person = { 
+  no: string;
+  nama_proyek: string;
+  volume: string;
+  biaya: string;
+  lokasi: string;
+  ket: string;
+};
+
+const data: Person[] = [
   {
     no: '1',
     nama_proyek: 'PROGRAM PEMBANGUNAN, PENGEMBANGAN DAN PEMELIHARAAN SARANA /PRASARANA LINGKUNGAN',
@@ -52,16 +61,9 @@ const data = [
   },
 ];
 
-const Example = () => {
-  const [isTableVisible, setIsTableVisible] = useState(false);
-
-  const toggleTableVisibility = () => {
-    setIsTableVisible(!isTableVisible);
-  };
-
-  const columns = useMemo(
+const pembangunan = () => {
+  const columns = useMemo<MRT_ColumnDef<Person>[]>(
     () => [
-
       {
         accessorKey: 'no',
         header: 'No',
@@ -99,42 +101,12 @@ const Example = () => {
   const table = useMaterialReactTable({
     columns,
     data,
-    enableColumnActions: false,
-    enableColumnFilters: false,
-    enablePagination: false,
-    enableSorting: false,
-    mrtTheme: (theme) => ({
-      baseBackgroundColor: theme.palette.background.default, //change default background color
-    }),
-    muiTableBodyRowProps: { hover: false },
-    muiTableProps: {
-      sx: {
-        border: '1px solid rgba(81, 81, 81, .5)',
-      },
-    },
-    muiTableHeadCellProps: {
-      sx: {
-        border: '1px solid rgba(81, 81, 81, .5)',
-        fontStyle: 'italic',
-        fontWeight: 'normal',
-      },
-    },
-    muiTableBodyCellProps: {
-      sx: {
-        border: '1px solid rgba(81, 81, 81, .5)',
-      },
-    },
   });
 
   return (
     <IonPage>
-      <IonContent>
-        {/* <div className={Styles.nav}>
-          <p>Administrasi Pembangunan <br></br>
-            Buku Inventaris Hasil-Hasil Pembangunan</p>
-          <button className={Styles.printbutton}>Print</button>
-        </div> */}
-        <Navbar>Administrasi Pembangunan Buku <br></br>Inventaris Hasil-Hasil Pembangungan</Navbar>
+      <Navbar>Administrasi Pembangunan Buku <br></br>Inventaris Hasil-Hasil Pembangunan</Navbar>
+      <IonContent> 
         <div className={Styles.table}>
           <MaterialReactTable table={table} />
         </div>
@@ -146,4 +118,4 @@ const Example = () => {
 
 };
 
-export default Example;
+export default pembangunan;

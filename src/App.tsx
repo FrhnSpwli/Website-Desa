@@ -9,7 +9,7 @@ import Login from './pages/Login';
 import Settings from './pages/Settings';
 import notFound from './pages/notFound';
 import Product from './pages/product';
-import Pembangunan from './pages/pembangunan';
+import Pembangunan from './pages/AdministrasiPembangunan';
 import Penduduk from './pages/AdministrasiPenduduk';
 import Kelembagaan from './pages/AdministrasiKelembagaan';
 
