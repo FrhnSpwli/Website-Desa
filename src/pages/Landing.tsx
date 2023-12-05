@@ -109,7 +109,7 @@ const Landing: React.FC = () => {
             </div>
           </div>  
 
-          <IonText className={Styles.cardText2}> Pengumuman </IonText> 
+        <IonText className={Styles.cardText2}> Pengumuman </IonText> 
           <div className={Styles.cardContainer2}>
             <div className={Styles.cardTitle2}>
              <div className={Styles.cardResponsive2}>
@@ -126,7 +126,7 @@ const Landing: React.FC = () => {
                         </IonCardContent>
                   </IonCard>
 
-                  <IonCard>
+                <IonCard>
                   <IonImg src={Pict6}/>
                     <IonCardHeader>
                         <IonCardSubtitle>Desa Fontaine</IonCardSubtitle>
