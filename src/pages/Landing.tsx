@@ -77,6 +77,7 @@ const Landing: React.FC = () => {
             </section>
             <IonImg src={Pic} />
           </div>
+        </div>
           <div className={Styles.cardContainer}>
             <IonText className={Styles.cardText}> Berita Terkini </IonText>
             <div className={Styles.cardTitle}>
