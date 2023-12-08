@@ -1,0 +1,179 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  width: 60%;
+  display: flex;
+  border-radius: 16px;
+  border: 3px var(--ion-color-light) solid;
+}
+
+.content {
+  font-weight: 100;
+  text-shadow: var(--ion-color-light);
+  border: var(--ion-color-light);
+}
+
+.left {
+  width: 40%;
+  background-image: url(BlueVillage.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 16px 0 0 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+}
+
+.left p {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.left h1 {
+  font-size: 72px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.right {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0 16px 16px 0;
+  justify-content: center;
+  padding: 24px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.content h1 {
+  font-size: 44px;
+  font-weight: 600;
+  color: var(--ion-color-primary);
+
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  background-color: var(--ion-color-light);
+  padding: 4px 16px;
+  border-radius: 8px;
+  border-radius: 16px;
+}
+
+.itemIcon {
+  font-size: x-large;
+}
+
+.keepLogin {
+  display: flex;
+  width: 100%;
+  padding: 4px;
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+}
+
+.keepLogin {
+  gap: 60px;
+  font-size: medium;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  .left {
+    width: 50%;
+  }
+
+  .right {
+    width: 50%;
+  }
+
+  .content h1 {
+    font-size: 32px;
+  }
+
+  .left h1 {
+    font-size: 48px;
+  }
+
+  .left p {
+    font-size: 16px;
+  }
+
+  .item {
+    padding: 4px 8px;
+  }
+
+  .itemIcon {
+    font-size: large;
+  }
+
+  .keepLogin {
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    width: 95%;
+  }
+
+  .left {
+    display: none;
+  }
+
+  .right {
+    width: 100%;
+    border-radius: 0 0 16px 16px;
+  }
+
+  .content h1 {
+    font-size: 24px;
+  }
+
+  .item {
+    padding: 4px 8px;
+  }
+
+  .itemIcon {
+    font-size: large;
+  }
+
+  .keepLogin {
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+

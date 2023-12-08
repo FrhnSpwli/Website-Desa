@@ -1,0 +1,65 @@
+body {
+    font-family: "Inter",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+}
+
+.layout {
+display: flex;
+}
+
+.layout-left {
+    width: 60%;
+    padding:100px;
+}
+
+.layout-right {
+    width: 40%;
+
+}
+
+
+.brand {
+    display: inline-block;
+    padding: 5px 15px;
+    margin-bottom: 0px;
+    color: var(--Primary, #2F6B4F);
+    font: size 24px;
+    font-weight: 500;
+    font-style: Inter;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.heading {
+    font-size: 56px;
+font-style: normal;
+font-weight: 700;
+color: var(--Black, #2A2C3D);
+
+}
+
+.lead {
+    color: var(--Black, #2A2C3D);
+font-family: Inter;
+font-size: 32px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.invite-form input {
+    width: auto;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(10, 27, 89, 0.2);
+}
+
+.invite-form button {
+    padding: 10px 30px;
+    flex-shrink: 0;
+    background-color: #2F6B4F;
+    color: #E6F4ED;;
+    border-radius: 8px;
+    border: none;
+}
+

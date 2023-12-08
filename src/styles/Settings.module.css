@@ -1,0 +1,63 @@
+/* Settings Page */
+.page-settings {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Menu Items */
+.menu-items {
+  padding: 10px;
+}
+
+.menu-items ion-item {
+  --padding-start: 16px;
+  --padding-end: 16px;
+}
+
+.menu-items ion-label {
+  font-size: 16px;
+}
+
+.menu-items ion-toggle {
+  --background-checked: #3880ff;
+  --background-unchecked: #f5f5f5;
+  --handle-background-checked: #0004ff;
+  --handle-background-unchecked: #fff;
+}
+
+.menu-items ion-select {
+  --placeholder-color: #bfbfbf;
+  --placeholder-font-size: 16px;
+  --icon-color: #bfbfbf;
+  --icon-size: 24px;
+}
+
+.menu-items ion-range {
+  --bar-background: #bfbfbf;
+  --bar-height: 4px;
+  --knob-background: #3880ff;
+  --knob-size: 16px;
+}
+
+.menu-items a {
+  color: #3880ff;
+  text-decoration: none;
+}
+
+/* Active Menu Item */
+.active {
+  text-decoration: double;
+}
+
+.active ion-icon {
+  color: #3880ff;
+}
+
+.active ion-label {
+  font-weight: bold;
+}
+
+.active ion-icon[slot='end'] {
+  transform: rotate(180deg);
+}

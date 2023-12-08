@@ -1,8 +1,17 @@
 import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import Home from './pages/Home';
 import About from './pages/About';
+import Contact from './pages/Contact';
+import Artikel from './pages/Artikel';
+import Landing from './pages/Landing';
+import Login from './pages/Login';
+import Settings from './pages/Settings';
+import notFound from './pages/notFound';
+import Product from './pages/product';
+import Pembangunan from './pages/AdministrasiPembangunan';
+import Penduduk from './pages/AdministrasiPenduduk';
+import Kelembagaan from './pages/AdministrasiKelembagaan';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -29,16 +38,19 @@ const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
-        <Route exact path="/home">
-          <Home />
-        </Route>
-        <Route exact path="/">
-          <Redirect to="/home" />
-        </Route>
-        <Route exact path="/about">
-          <About />
-        </Route>
-        <Route exact path="/settings" component={Settings} />
+        <Route path="/home" component={Landing} />
+        <Route path="/about" component={About} />
+        <Route path="/artikel" component={Artikel} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/settings" component={Settings} />
+        <Route path="/login" component={Login} />
+        <Route path="/landing" component={Landing} />
+        <Route path="/product" component={Product} />
+        <Route path="/pembangunan" component={Pembangunan} />
+        <Route path="/penduduk" component={Penduduk} />
+        <Route path="/kelembagaan" component={Kelembagaan} />
+        <Route exact path="/" render={() => <Redirect to="/home" />} />
+        <Route component={notFound} />
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
