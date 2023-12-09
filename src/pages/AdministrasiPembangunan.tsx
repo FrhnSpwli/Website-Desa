@@ -105,7 +105,7 @@ const pembangunan = () => {
 
   return (
     <IonPage>
-      <Navbar>Administrasi Pembangunan Buku <br></br>Inventaris Hasil-Hasil Pembangunan</Navbar>
+      <Navbar>Administrasi Pembangunan</Navbar>
       <IonContent> 
         <div className={Styles.table}>
           <MaterialReactTable table={table} />
