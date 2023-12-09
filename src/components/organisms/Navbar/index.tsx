@@ -1,9 +1,9 @@
 import { ReactNode, useState, useEffect } from 'react';
 import { IonButtons, IonContent, IonHeader, IonMenu, IonMenuButton, IonTitle, IonItem, IonLabel, IonIcon, IonAccordion, IonAccordionGroup } from '@ionic/react';
-import { call, open, document, home, settings, cube, help, people, peopleCircle, peopleCircleOutline, informationCircle, build } from 'ionicons/icons';
+import { callOutline, alertCircleOutline, newspaperOutline, homeOutline, settingsOutline, cubeOutline, documentsOutline, peopleOutline, businessOutline, libraryOutline } from 'ionicons/icons';
 import Styles from './Navbar.module.css'
 import Button from '../../atoms/button';
-import { HolidayVillageTwoTone } from '@mui/icons-material';
+import { HolidayVillageTwoTone, SettingsOutlined } from '@mui/icons-material';
 
 interface NavbarProps {
   children: ReactNode;
@@ -74,52 +74,55 @@ const Navbar = ({ children }: NavbarProps) => {
           <div className={Styles.container}>
             <div className={Styles.menuItem}>
               <IonItem href='/home'>
-                <IonIcon icon={home} slot="start" />
+                <IonIcon icon={homeOutline} slot="start" />
                 <IonLabel>Home</IonLabel>
               </IonItem>
               <IonItem href='/about'>
-                <IonIcon icon={open} slot="start" />
+                <IonIcon icon={alertCircleOutline} slot="start" />
                 <IonLabel>About</IonLabel>
               </IonItem>
               <IonItem href='/artikel'>
-                <IonIcon icon={document} slot="start" />
+                <IonIcon icon={newspaperOutline} slot="start" />
                 <IonLabel>News</IonLabel>
               </IonItem>
               <IonItem href='/product'>
-                <IonIcon icon={cube} slot="start" />
+                <IonIcon icon={cubeOutline} slot="start" />
                 <IonLabel>Products</IonLabel>
               </IonItem>
               <IonItem href='/contact'>
-                <IonIcon icon={call} slot="start" />
+                <IonIcon icon={callOutline} slot="start" />
                 <IonLabel>Contact</IonLabel>
               </IonItem>
-              <IonItem href='/settings'>
-                <IonIcon icon={settings} slot="start" />
+              {/* <IonItem href='/settings'>
+                <IonIcon icon={settingsOutline} slot="start" />
                 <IonLabel>Settings</IonLabel>
-              </IonItem>
+              </IonItem> */}
               <IonAccordionGroup>
                 <IonAccordion value="first">
                   <IonItem slot="header">
-                    <IonIcon icon={people} slot="start" />
+                    <IonIcon icon={documentsOutline} slot="start" />
                     <IonLabel>Administrasi</IonLabel>
                   </IonItem>
                   <div className={Styles.accordionItem} slot="content">
                     <IonItem href='/penduduk'>
+                      <IonIcon icon={peopleOutline} slot="start" />
                       <IonLabel>Penduduk</IonLabel>
                     </IonItem>
                     <IonItem href='/kelembagaan'>
+                      <IonIcon icon={libraryOutline} slot="start" />
                       <IonLabel>Kelembagaan</IonLabel>
                     </IonItem>
                     <IonItem href='/pembangunan'>
+                    <IonIcon icon={businessOutline} slot="start" />
                       <IonLabel>Pembangunan</IonLabel>
                     </IonItem>
                   </div>
                 </IonAccordion>
               </IonAccordionGroup>
             </div>
-            <div className={Styles.button}>
+            {/* <div className={Styles.button}>
               <Button path='/login' fill='solid'>Login</Button>
-            </div>
+            </div> */}
           </div>
         </IonContent>
       </IonMenu >
@@ -143,16 +146,16 @@ const Navbar = ({ children }: NavbarProps) => {
               <div className={`${Styles.item} ${isActive('/contact') ? Styles.active : ''}`}>
                 <a href='/contact'>Contact</a>
               </div>
-              <div className={`${Styles.item} ${isActive('/settings') ? Styles.active : ''}`}>
+              {/* <div className={`${Styles.item} ${isActive('/settings') ? Styles.active : ''}`}>
                 <a href='/settings'>Settings</a>
-              </div>
+              </div> */}
               <div className={`${Styles.item} ${isActive('/admin') ? Styles.active : ''}`} onClick={showAdminPopup}>
-                <a>Admin</a>
+                <a>Administrasi</a>
               </div>
             </div>
-            <div className={Styles.contentItem}>
+            {/* <div className={Styles.contentItem}>
               <Button path='/login' shape='round' fill='solid'>Login</Button>
-            </div>
+            </div> */}
             {isAdminPopupVisible && adminPopupContent}
           </div>
           {isSmallScreen && (
