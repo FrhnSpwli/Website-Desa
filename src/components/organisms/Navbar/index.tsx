@@ -25,13 +25,13 @@ const Navbar = ({ children }: NavbarProps) => {
     <div className={Styles.adminPopup}>
       <div>
       <IonItem href='/kelembagaan'>
-        <IonLabel>Administrasi Kelembagaan</IonLabel>
+        <IonLabel>Institutional Administration</IonLabel>
       </IonItem>
       <IonItem href='/pembangunan'>
-        <IonLabel>Administrasi Pembangunan</IonLabel>
+        <IonLabel>Construction Administration</IonLabel>
       </IonItem>
       <IonItem href='/penduduk'>
-        <IonLabel>Administrasi Penduduk</IonLabel>
+        <IonLabel>Civil Administration</IonLabel>
       </IonItem>
       </div>
       <button onClick={hideAdminPopup}>Close</button>
@@ -101,20 +101,20 @@ const Navbar = ({ children }: NavbarProps) => {
                 <IonAccordion value="first">
                   <IonItem slot="header">
                     <IonIcon icon={documentsOutline} slot="start" />
-                    <IonLabel>Administrasi</IonLabel>
+                    <IonLabel>Administration</IonLabel>
                   </IonItem>
                   <div className={Styles.accordionItem} slot="content">
                     <IonItem href='/penduduk'>
                       <IonIcon icon={peopleOutline} slot="start" />
-                      <IonLabel>Penduduk</IonLabel>
+                      <IonLabel>Civil</IonLabel>
                     </IonItem>
                     <IonItem href='/kelembagaan'>
                       <IonIcon icon={libraryOutline} slot="start" />
-                      <IonLabel>Kelembagaan</IonLabel>
+                      <IonLabel>Institutional</IonLabel>
                     </IonItem>
                     <IonItem href='/pembangunan'>
                     <IonIcon icon={businessOutline} slot="start" />
-                      <IonLabel>Pembangunan</IonLabel>
+                      <IonLabel>Construction</IonLabel>
                     </IonItem>
                   </div>
                 </IonAccordion>
@@ -150,7 +150,7 @@ const Navbar = ({ children }: NavbarProps) => {
                 <a href='/settings'>Settings</a>
               </div> */}
               <div className={`${Styles.item} ${isActive('/admin') ? Styles.active : ''}`} onClick={showAdminPopup}>
-                <a>Administrasi</a>
+                <a>Administration</a>
               </div>
             </div>
             {/* <div className={Styles.contentItem}>
