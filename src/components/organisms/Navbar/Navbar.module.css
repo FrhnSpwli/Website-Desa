@@ -99,7 +99,7 @@
 .adminPopup {
   position: absolute;
   top: 72px;
-  right: 128px;
+  right: 0px;
   background-color: var(--ion-color-light);
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
