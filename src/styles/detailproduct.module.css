@@ -1,0 +1,45 @@
+.container {
+  width: 100%;
+  padding: 0 15px;
+ }
+ 
+ .title h1 {
+  text-align: center;
+  padding: 30px 0;
+  font-size: 28px;
+ }
+ 
+ .content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: none;
+ }
+
+ .image {
+  width: 50%;
+  height: 500px;
+ }
+ 
+ .responsive {
+  padding: 20px 0;
+ }
+
+ .text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  color: black;
+  padding: 0 20px;
+  
+ }
+ .text p{
+  font-size: 20px;
+  padding: 10px 0;
+ }
+ @media screen and (max-width: 768px) {
+  .responsive {
+     padding: 0;
+  }
+ }
