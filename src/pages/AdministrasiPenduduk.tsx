@@ -8,7 +8,6 @@ import Footer from "../components/organisms/Footer";
 import Navbar from "../components/organisms/Navbar";
 import { IonContent, IonPage } from "@ionic/react";
 import Styles from "../styles/AdministrasiPenduduk.module.css";
-import { IntegerType } from "mongodb";
 
 //example data type
 type Person = {
