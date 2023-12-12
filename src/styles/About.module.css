@@ -5,7 +5,7 @@ ion-toolbar {
 .hero {
     height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(https://images7.alphacoders.com/118/1189619.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(https://getlost.id/wp-content/uploads/2021/07/kete-kesu_1183789981.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -47,6 +47,7 @@ ion-toolbar {
 
 .about_text {
     width: 50%;
+    text-align: justify;
 }
 
 .main {
@@ -108,12 +109,11 @@ ion-toolbar {
 }
 
 .chief_text {
-    width: 550px;
+    width: 50%;
 }
 
 .profile {
-    width: 1130px;
-    max-width: 95%;
+    width: 95%;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -140,7 +140,9 @@ ion-toolbar {
     margin-bottom: 44px;
 }
 
+
 /* media screen */
+
 @media screen and (max-width: 768px) {
     .content {
         position: absolute;
@@ -178,7 +180,7 @@ ion-toolbar {
     }
 
     .about_text {
-        width: 550px;
+        width: 90%;
     }
 
     .main {
@@ -236,16 +238,22 @@ ion-toolbar {
     }
 
     .chief_text {
-        width: 50%;
+        width: 90%;
     }
 
     .chief img {
         height: auto;
-        width: 40%;
+        width: 90%;
+    }
+
+    .profile {
+        flex-direction: column;
     }
 }
 
+
 /* media screen */
+
 @media screen and (max-width: 480px) {
     .content {
         text-align: left;
@@ -345,7 +353,6 @@ ion-toolbar {
 
     .chief_text {
         width: 100%;
-        
     }
 
     .profile {
