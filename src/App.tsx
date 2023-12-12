@@ -12,6 +12,7 @@ import Product from './pages/product';
 import Pembangunan from './pages/AdministrasiPembangunan';
 import Penduduk from './pages/AdministrasiPenduduk';
 import Kelembagaan from './pages/AdministrasiKelembagaan';
+import DetailProduct from './pages/detailproduct';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -49,6 +50,7 @@ const App: React.FC = () => (
         <Route path="/pembangunan" component={Pembangunan} />
         <Route path="/penduduk" component={Penduduk} />
         <Route path="/kelembagaan" component={Kelembagaan} />
+        <Route path="/detailproduct" component={DetailProduct} />
         <Route exact path="/" render={() => <Redirect to="/home" />} />
         <Route component={notFound} />
       </IonRouterOutlet>
