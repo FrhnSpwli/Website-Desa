@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   padding: 48px;
-  gap: 24px;
+  gap: 12px;
 }
 
 .title {
@@ -12,46 +12,37 @@
 }
 
 .responsive {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; 
-  gap: 10px;
-  padding: 10px;
-}
-.ion-card-row{
-  display: flex;
-  flex-direction: row;
-}
-
-.ion-card-row ion-card{
-  flex: 1;
-  margin: 10px;
-  display: flex;
-  flex-direction: row;
-}
-.card{
-  border-radius: 10px;
-  overflow: hidden;
-  margin: 10px;
-}
-
-.cardContent{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .image {
-  margin: 20px;
-  max-width: 500px;
   object-fit: cover;
-  margin-right:10px;
-  height: 400px;
+  height: 250px;
 }
 
-.desc{
-  flex: 1;
-  margin: 30px;
-  justify-content: center;
-  text-align: left;
+@media (max-width: 1024px) {
+  .responsive {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .responsive {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .container {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .responsive {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .container {
+    padding: 24px;
+  }
 }

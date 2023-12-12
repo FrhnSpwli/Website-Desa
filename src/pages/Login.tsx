@@ -11,7 +11,7 @@ function login() {
         <div className={Styles.container}>
           <div className={Styles.left}>
             <p>Selamat Datang di Desa</p>
-            <h1>Fontaine</h1>
+            <h1>Toraja</h1>
           </div>
           <div className={Styles.right}>
             <div className={Styles.content}>
