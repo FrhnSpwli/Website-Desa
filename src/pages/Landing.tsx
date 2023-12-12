@@ -126,7 +126,7 @@ const Landing: React.FC = () => {
                         </IonCardContent>
                   </IonCard>
 
-                <IonCard>
+                <IonCard className={Styles.ioncard2}>
                   <IonImg src={Pict6}/>
                     <IonCardHeader>
                         <IonCardSubtitle>Desa Fontaine</IonCardSubtitle>
@@ -138,7 +138,7 @@ const Landing: React.FC = () => {
                         </IonCardContent>
                   </IonCard>
 
-                  <IonCard>
+                  <IonCard className={Styles.ioncard3}>
                   <IonImg src={Pict7}/>
                     <IonCardHeader>
                         <IonCardSubtitle>Desa Fontaine</IonCardSubtitle>
@@ -150,7 +150,7 @@ const Landing: React.FC = () => {
                         </IonCardContent>
                   </IonCard>
 
-                  <IonCard>
+                  <IonCard className={Styles.ioncard4}>
                   <IonImg src={Pict8}/>
                     <IonCardHeader>
                         <IonCardSubtitle>Desa Fontaine</IonCardSubtitle>
