@@ -138,8 +138,8 @@ const Landing: React.FC = () => {
                   <IonCardHeader>
                         <IonCardSubtitle>15-04-2023</IonCardSubtitle>
                         <IonCardTitle>Announcement of the Final Results After Objections for the 
-                          Prospective Civil Servants with Specific Skills (PPPK) Teacher Recruitment 
-                          for the Academic Year 2023.</IonCardTitle>
+                        Prospective Civil Servants with Specific Skills (PPPK) Teacher Recruitment 
+                        for the Academic Year 2023.</IonCardTitle>
                         </IonCardHeader>
                         <IonCardContent>
                         This announcement is conveyed based on the Selection Committee's official notice numbered 
@@ -166,7 +166,7 @@ const Landing: React.FC = () => {
                     <IonCardHeader>
                         <IonCardSubtitle>12-09-2023</IonCardSubtitle>
                         <IonCardTitle>Announcement of the Final Assessment Results for the 
-                          Open Selection of the Position of Regional Secretary of Tana Toraja Regency for the Year 2023</IonCardTitle>
+                        Open Selection of the Position of Regional Secretary of Tana Toraja Regency for the Year 2023</IonCardTitle>
                         </IonCardHeader>
                         <IonCardContent>
                         We hereby publish the Announcement of the Open Selection Committee for the Position of Regional 
@@ -180,8 +180,8 @@ const Landing: React.FC = () => {
                     <IonCardHeader>
                         <IonCardSubtitle>17-05-2023</IonCardSubtitle>
                         <IonCardTitle>Announcement of the Final Results After Objections for the Selection of 
-                          Prospective Civil Servants with Specific Skills (PPPK) Technical Staff of the Regional 
-                          Government of Tana Toraja Regency for the Academic Year 2023.</IonCardTitle>
+                        Prospective Civil Servants with Specific Skills (PPPK) Technical Staff of the Regional 
+                        Government of Tana Toraja Regency for the Academic Year 2023.</IonCardTitle>
                         </IonCardHeader>
                         <IonCardContent>
                         Hereby, the Selection Committee announces the Results After Objections for the Prospective 
