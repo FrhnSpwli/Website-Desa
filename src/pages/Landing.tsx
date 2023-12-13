@@ -135,51 +135,61 @@ const Landing: React.FC = () => {
              <div className={Styles.cardResponsive2}>
 
                 <IonCard>                
-                  <img src=""/>
-                    <IonCardHeader>
-                        <IonCardSubtitle>Desa Fontaine</IonCardSubtitle>
-                        <IonCardTitle>Wilayah Baru?</IonCardTitle>
+                  <IonCardHeader>
+                        <IonCardSubtitle>15-04-2023</IonCardSubtitle>
+                        <IonCardTitle>Announcement of the Final Results After Objections for the 
+                          Prospective Civil Servants with Specific Skills (PPPK) Teacher Recruitment 
+                          for the Academic Year 2023.</IonCardTitle>
                         </IonCardHeader>
                         <IonCardContent>
-                        Fontaine telah memiliki beberapa rumor dan bocoran 
-                        yang mengisyaratkan apa yang diharapkan dari wilayah baru tersebut.
+                        This announcement is conveyed based on the Selection Committee's official notice numbered 
+                        810-196/BKPSDM/IV/2023 dated April 14, 2023, regarding the Final Results After Objections 
+                        for the Selection of Prospective PPPK Candidates for the Functional Position of Teacher in 
+                        the Tana Toraja Regency Government for the Fiscal Year 2023.
                         </IonCardContent>
                   </IonCard>
 
                 <IonCard className={Styles.ioncard2}>
-                  <img src=""/>
                     <IonCardHeader>
-                        <IonCardSubtitle>Desa Fontaine</IonCardSubtitle>
-                        <IonCardTitle>Siapa Archon Fontaine Sebenarnya?</IonCardTitle>
+                        <IonCardSubtitle>10-08-2023</IonCardSubtitle>
+                        <IonCardTitle>Announcement of the Open Selection for the High Primary Leadership Position of Regional Secretary 
+                        of the Tana Toraja Regency Government for the Year 2023.</IonCardTitle>
                         </IonCardHeader>
                         <IonCardContent>
-                            Dari berita yang saya dapatkan menurut warga Desa Fontaine 
-                            archon fontaine yang sebenarnya adalah...
+                        The Selection Committee hereby announces the Open Selection for the High Primary Leadership Position 
+                        of Regional Secretary of the Tana Toraja Regency Government for the Year 2023, as per the official 
+                        notice numbered 800/01/Pansel.JPTP.Sekda/VIII/2023 dated August 8, 2023.
                         </IonCardContent>
                   </IonCard>
 
                   <IonCard className={Styles.ioncard3}>
-                  <img src=""/>
                     <IonCardHeader>
-                        <IonCardSubtitle>Desa Fontaine</IonCardSubtitle>
-                        <IonCardTitle>Furina Focalor</IonCardTitle>
+                        <IonCardSubtitle>12-09-2023</IonCardSubtitle>
+                        <IonCardTitle>Announcement of the Final Assessment Results for the 
+                          Open Selection of the Position of Regional Secretary of Tana Toraja Regency for the Year 2023</IonCardTitle>
                         </IonCardHeader>
                         <IonCardContent>
-                          Furina berkata: "Satu kebohongan selalu mengikuti kebohongan yang lain, 
-                          sehingga "keadilan" pasti menunggu di akhir."
+                        We hereby publish the Announcement of the Open Selection Committee for the Position of Regional 
+                        Secretary (JPTP Sekda) Number: 800/16/Pansel JPTP.Sekda/IX/2023 dated September 12, 2023, 
+                        regarding the Determination of the Final Assessment Results for the Open Selection of the 
+                        High Primary Leadership Position of the Regional Secretary of Tana Toraja Regency.
                         </IonCardContent>
                   </IonCard>
 
                   <IonCard className={Styles.ioncard4}>
-                  <img src=""/>
                     <IonCardHeader>
-                        <IonCardSubtitle>Desa Fontaine</IonCardSubtitle>
-                        <IonCardTitle>Bangunan di Desa Fontaine</IonCardTitle>
+                        <IonCardSubtitle>17-05-2023</IonCardSubtitle>
+                        <IonCardTitle>Announcement of the Final Results After Objections for the Selection of 
+                          Prospective Civil Servants with Specific Skills (PPPK) Technical Staff of the Regional 
+                          Government of Tana Toraja Regency for the Academic Year 2023.</IonCardTitle>
                         </IonCardHeader>
                         <IonCardContent>
-                        konstruksi bangunan di Fontaine mengadopsi desain klasik bergaya Eropa dan hadir 
-                        dengan beberapa bangunan publik utama macam teater Opera Epiclese, pengadilan 
-                        The Court of Fontaine, dan masih banyak lagi.
+                        Hereby, the Selection Committee announces the Results After Objections for the Prospective 
+                        Civil Servants with Specific Skills (PPPK) Recruitment of the Tana Toraja Regency Government 
+                        for the Fiscal Year 2023. This announcement is based on the official notice numbered 
+                        810-229/BKPSDM/V/2023 dated May 16, 2023, attached below, regarding the Final Results After 
+                        Objections for the Selection of Prospective PPPK Candidates for the Technical Staff Functional 
+                        Positions in the Tana Toraja Regency Government for the Fiscal Year 2023.
                         </IonCardContent>
                   </IonCard>
               </div>
