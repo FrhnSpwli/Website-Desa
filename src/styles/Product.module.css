@@ -21,6 +21,15 @@
   height: 250px;
 }
 
+.card {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
 @media (max-width: 1024px) {
   .responsive {
     grid-template-columns: repeat(3, 1fr);
