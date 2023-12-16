@@ -1,12 +1,14 @@
-import React, { useState, ReactNode } from 'react';
-import { IonInput } from '@ionic/react';
+import React, { useState, ReactNode } from "react";
+import { IonInput } from "@ionic/react";
 
 interface InputProps {
   children: ReactNode;
-  type: 'email' | 'text' | 'password';
+  type: "email" | "text" | "password";
+  value?: string; 
+  onInput?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Input = ({ children, type }: InputProps) => {
+const Input = ({ children, type, value, onInput }: InputProps) => {
   const [isTouched, setIsTouched] = useState(false);
   const [isValid, setIsValid] = useState<boolean>();
 
@@ -21,30 +23,34 @@ const Input = ({ children, type }: InputProps) => {
 
     setIsValid(undefined);
 
-    if (value === '') return;
+    if (value === "") return;
 
-    if (type === 'email') {
-        validateEmail(value) !== null ? setIsValid(true) : setIsValid(false);
+    if (type === "email") {
+      validateEmail(value) !== null ? setIsValid(true) : setIsValid(false);
     }
   };
 
-const markTouched = () => {
+  const markTouched = () => {
     setIsTouched(true);
-};
+  };
 
-return (
+  return (
     <IonInput
-        className={`${isValid ? 'ion-valid' : ''} ${isValid === false ? 'ion-invalid' : ''} ${isTouched ? 'ion-touched' : ''}`}
-        type={`${type}`}
-        mode='ios'
-        fill="solid"
-        label={`${children}`}
-        labelPlacement="floating"
-        helperText={`Masukkan ${children}`}
-        errorText="Invalid email"
-        onIonInput={(event) => validate(event)}
-        onIonBlur={() => markTouched()}
+      className={`${isValid ? "ion-valid" : ""} ${
+        isValid === false ? "ion-invalid" : ""
+      } ${isTouched ? "ion-touched" : ""}`}
+      type={`${type}`}
+      mode="ios"
+      fill="solid"
+      value={value}
+      onInput={onInput}
+      label={`${children}`}
+      labelPlacement="floating"
+      helperText={`Masukkan ${children}`}
+      errorText="Invalid email"
+      onIonInput={(event) => validate(event)}
+      onIonBlur={() => markTouched()}
     ></IonInput>
-);
-}
+  );
+};
 export default Input;
