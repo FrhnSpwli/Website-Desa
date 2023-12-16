@@ -1,12 +1,44 @@
-import { IonPage, IonIcon, IonCheckbox, IonPopover } from "@ionic/react";
+import { IonPage, IonIcon, IonToast } from "@ionic/react";
 import Styles from "../styles/Login.module.css";
 import Button from "../components/atoms/button";
 import Input from "../components/atoms/input";
 import { lockClosed, person } from "ionicons/icons";
+import { useState } from "react";
+import { signInWithEmailAndPasswordHandler } from "../../config/firebase";
 
-function login() {
+function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [showToast, setShowToast] = useState(false);
+
+  const handleLogin = async () => {
+    try {
+      const trimmedEmail = email.trim();
+      await signInWithEmailAndPasswordHandler(trimmedEmail, password);
+      localStorage.setItem("auth", "true");
+      window.location.href = "/admin/artikel";
+    } catch (error) {
+      setShowToast(true);
+      console.error("Login error:", error);
+    }
+  };
+
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(e.target.value);
+  };
+
   return (
     <IonPage>
+      <IonToast
+        isOpen={showToast}
+        onDidDismiss={() => setShowToast(false)}
+        message="Only For Admin!"
+        duration={2000}
+      />
       <div className={Styles.body}>
         <div className={Styles.container}>
           <div className={Styles.left}>
@@ -23,7 +55,9 @@ function login() {
                   color="primary"
                   className={Styles.itemIcon}
                 />
-                <Input type="email">Email</Input>
+                <Input type="email" value={email} onInput={handleEmailChange}>
+                  Email
+                </Input>
               </div>
               <div className={Styles.item}>
                 <IonIcon
@@ -32,18 +66,21 @@ function login() {
                   color="primary"
                   className={Styles.itemIcon}
                 />
-                <Input type="password">Password</Input>
-              </div>
-              <div className={Styles.keepLogin}>
-                <IonCheckbox labelPlacement="end" justify="start">
-                  Keep me signed in until I sign out
-                </IonCheckbox>
-                <a href="#">Forgot Password ?</a>
+                <Input
+                  type="password"
+                  value={password}
+                  onInput={handlePasswordChange}
+                >
+                  Password
+                </Input>
               </div>
               <div className={Styles.btn}>
-                <Button shape="round" path="/home">
-                  Login
-                </Button>
+                <div
+                  onClick={handleLogin}
+                  style={{ display: "flex", flexDirection: "column" }}
+                >
+                  <Button shape="round">Login</Button>
+                </div>
               </div>
             </div>
           </div>
@@ -53,4 +90,4 @@ function login() {
   );
 }
 
-export default login;
+export default Login;
