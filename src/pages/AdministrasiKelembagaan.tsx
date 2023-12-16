@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, useState, useEffect } from "react";
 import {
   MaterialReactTable,
   useMaterialReactTable,
@@ -8,116 +8,78 @@ import Footer from "../components/organisms/Footer";
 import Navbar from "../components/organisms/Navbar";
 import { IonContent, IonPage } from "@ionic/react";
 import Styles from "../styles/AdministrasiKelembagaan.module.css";
+import { Timestamp, collection, getDocs } from "firebase/firestore";
+import { db } from "../../config/firebase";
 
-type Person = {
-  nomor: string;
-  name: {
-    firstName: string;
-  };
-  JenisKelamin: string;
-  Jabatan: string;
-  TanggalPenangkatan: string;
-  TanggalPemberhentian: string;
+type Kelembagaan = {
+  name: string;
+  description: string
+  startFrom: Timestamp;
 };
 
-const data: Person[] = [
-  {
-    nomor: "1",
-    name: {
-      firstName: "Alucard",
-    },
-    Jabatan: "Demon Hunter",
-    TanggalPenangkatan: "12-02-2018",
-    TanggalPemberhentian: "12-03-2020",
-    JenisKelamin: "Laki-Laki",
-  },
-  {
-    nomor: "2",
-    name: {
-      firstName: "Sukuna",
-    },
-    Jabatan: "King of curses",
-    TanggalPenangkatan: "14-04-2020",
-    TanggalPemberhentian: "12-07-2022",
-    JenisKelamin: "Laki-Laki",
-  },
-  {
-    nomor: "3",
-    name: {
-      firstName: "Xavier",
-    },
-    Jabatan: "Arbiter Of Light",
-    TanggalPenangkatan: "20-03-2020",
-    TanggalPemberhentian: "22-04-2023",
-    JenisKelamin: "Laki-Laki",
-  },
-  {
-    nomor: "4",
-    name: {
-      firstName: "Ganyu",
-    },
-    Jabatan: "Queen adeptus",
-    TanggalPenangkatan: "20-09-2020",
-    TanggalPemberhentian: "21-03-2039",
-    JenisKelamin: "Perempuan",
-  },
-  {
-    nomor: "5",
-    name: {
-      firstName: "Mitsuha",
-    },
-    Jabatan: "Wife Of Zanist",
-    TanggalPenangkatan: "17-06-2016",
-    TanggalPemberhentian: "12-06-2025",
-    JenisKelamin: "Perempuan",
-  },
-];
+const AdministrasiKelembagaan = () => {
+  const kelembagaanRef = collection(db, "kelembagaan");
 
-const Example = () => {
-  const columns = useMemo<MRT_ColumnDef<Person>[]>(
+  const [kelembagaanList, setKelembagaanList] = useState<Kelembagaan[]>([]);
+
+  useEffect(() => {
+    const getKelembagaanList = async () => {
+      try {
+        const data = await getDocs(kelembagaanRef);
+        const items = data.docs.map((doc) => {
+          const { name, description, startFrom } = doc.data();
+          return {
+            name,
+            description,
+            startFrom: startFrom.toDate().toLocaleDateString(),
+          };
+        });
+        setKelembagaanList(items);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getKelembagaanList();
+  }, []);
+
+  const formatTimestamp = (timestamp: { toDate: () => any; }) => {
+    const date = timestamp.toDate();
+    return date.toLocaleDateString();
+  };
+
+  const columns: MRT_ColumnDef<Kelembagaan>[] = useMemo(
     () => [
       {
-        accessorKey: "nomor",
-        header: "No",
+        header: "Nama Kelembagaan",
+        accessorKey: "name",
         size: 150,
       },
       {
-        accessorKey: "name.firstName",
-        header: "First Name",
+        header: "Tanggal Pendirian",
+        accessorKey: "startFrom",
         size: 150,
+        render: (value: { toDate: () => any; }) => formatTimestamp(value),
       },
       {
-        accessorKey: "JenisKelamin",
-        header: "Jenis Kelamin",
-        size: 150,
-      },
-      {
-        accessorKey: "Jabatan",
-        header: "Jabatan",
-        size: 200,
-      },
-      {
-        accessorKey: "TanggalPenangkatan",
-        header: "Tanggal Pengangkatan",
-        size: 150,
-      },
-      {
-        accessorKey: "TanggalPemberhentian",
-        header: "Tanggal Pemberhentian",
-        size: 150,
-      },
+        header: "Deskripsi",
+        accessorKey: "description",
+        size: 500,
+      }
     ],
     []
   );
 
   const table = useMaterialReactTable({
     columns,
-    data,
+    data: kelembagaanList,
+    enablePagination: true,
+    enableSorting: true,
+    enableStickyFooter: true,
   });
 
   return (
     <IonPage>
-      <Navbar>Administrasi Kelambagaan</Navbar>
+      <Navbar>Administrasi Kelembagaan</Navbar>
       <IonContent>
         <div className={Styles.container}>
           <MaterialReactTable table={table} />
@@ -128,4 +90,4 @@ const Example = () => {
   );
 };
 
-export default Example;
+export default AdministrasiKelembagaan;

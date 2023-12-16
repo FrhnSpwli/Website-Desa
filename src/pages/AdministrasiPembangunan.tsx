@@ -1,121 +1,102 @@
-import Styles from '../styles/AdministrasiPembangunan.module.css';
-import Footer from '../components/organisms/Footer';
-import Navbar from '../components/organisms/Navbar';
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useEffect } from "react";
 import {
   MaterialReactTable,
   useMaterialReactTable,
   type MRT_ColumnDef,
-} from 'material-react-table';
-import { IonContent, IonPage } from '@ionic/react';
+} from "material-react-table";
+import Footer from "../components/organisms/Footer";
+import Navbar from "../components/organisms/Navbar";
+import { IonContent, IonPage } from "@ionic/react";
+import Styles from "../styles/AdministrasiPembangunan.module.css";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../config/firebase";
+import { formatRupiah } from "../../utils/formatter";
 
-type Person = { 
-  no: string;
-  nama_proyek: string;
-  volume: string;
+type Pembangunan = {
+  name: string;
+  luas: number;
   biaya: string;
   lokasi: string;
-  ket: string;
+  keterangan: string;
 };
 
-const data: Person[] = [
-  {
-    no: '1',
-    nama_proyek: 'PROGRAM PEMBANGUNAN, PENGEMBANGAN DAN PEMELIHARAAN SARANA /PRASARANA LINGKUNGAN',
-    volume: '800 m2',
-    biaya: '900 jt',
-    lokasi: 'Desa Panaikang, Kabupaten Gowa',
-    ket: 'Progress'
-  },
-  {
-    no: '2',
-    nama_proyek: 'PROGRAM PEMBANGUNAN DAN PENGEMBANGAN SARANA DAN PRASARANA FISIK PERKANTORAN, KESEHATAN, PENDIDIKAN DAN SOSIAL',
-    volume: '700 m2',
-    biaya: '600jt',
-    lokasi: 'Desa Panaikang, Kabupaten Gowa',
-    ket: 'Progress'
-  },
-  {
-    no: '3',
-    nama_proyek: 'KEG. PEMB. SARANA / PRASARANA PERKANTORAN DAN KESEHATAN',
-    volume: '900 m2',
-    biaya: '670jt',
-    lokasi: 'Desa Panaikang, Kabupaten Gowa',
-    ket: 'Progress'
-  },
-  {
-    no: '4',
-    nama_proyek: 'KEGIATAN PEMBANGUNAN SARANA PRASARANA KESENIAN DAN KEBUDAYAAN',
-    volume: '500 m2',
-    biaya: '160jt',
-    lokasi: 'Desa Panaikang, Kabupaten Gowa',
-    ket: 'Progress'
-  },
-  {
-    no: '5',
-    nama_proyek: 'PENGADAAN, PEMBANGUNAN, PENGEMBANGAN DAN PEMELIHARAAN SARANA EKONOMI',
-    volume: '700 m2',
-    biaya: '750jt',
-    lokasi: 'Desa Panaikang, Kabupaten Gowa',
-    ket: 'Progress'
-  },
-];
+const AdministrasiPembangunan = () => {
+  const pembangunanRef = collection(db, "pembangunan");
 
-const pembangunan = () => {
-  const columns = useMemo<MRT_ColumnDef<Person>[]>(
+  const [pembangunanList, setPembangunanList] = useState<Pembangunan[]>([]);
+
+  useEffect(() => {
+    const getPembangunanList = async () => {
+      try {
+        const data = await getDocs(pembangunanRef);
+        const items = data.docs.map((doc) => {
+          const { name, luas, biaya, lokasi, keterangan } = doc.data();
+          return {
+            name,
+            luas,
+            biaya: formatRupiah(biaya),
+            lokasi,
+            keterangan,
+          };
+        });
+        setPembangunanList(items);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getPembangunanList();
+  }, []);
+
+  const columns: MRT_ColumnDef<Pembangunan>[] = useMemo(
     () => [
       {
-        accessorKey: 'no',
-        header: 'No',
-        size: 10,
+        header: "Pembangunan",
+        accessorKey: "name",
+        size: 150,
       },
       {
-        accessorKey: 'nama_proyek',
-        header: 'Nama Proyek',
-        size: 500,
-      },
-      {
-        accessorKey: 'volume',
-        header: 'Volume',
+        header: "Luas (m2)",
+        accessorKey: "luas",
         size: 100,
       },
       {
-        accessorKey: 'biaya',
-        header: 'Biaya',
-        size: 100,
+        header: "Biaya",
+        accessorKey: "biaya",
+        size: 150,
       },
       {
-        accessorKey: 'lokasi',
-        header: 'Lokasi',
-        size: 155,
+        header: "Lokasi",
+        accessorKey: "lokasi",
+        size: 250,
       },
       {
-        accessorKey: 'ket',
-        header: 'Keterangan',
+        header: "Keterangan",
+        accessorKey: "keterangan",
         size: 100,
       },
     ],
-    [],
+    []
   );
 
   const table = useMaterialReactTable({
     columns,
-    data,
+    data: pembangunanList,
+    enablePagination: true,
+    enableSorting: true,
+    enableStickyFooter: true,
   });
 
   return (
     <IonPage>
       <Navbar>Administrasi Pembangunan</Navbar>
-      <IonContent> 
-        <div className={Styles.table}>
+      <IonContent>
+        <div className={Styles.container}>
           <MaterialReactTable table={table} />
         </div>
       </IonContent>
       <Footer />
     </IonPage>
-
   );
-
 };
 
-export default pembangunan;
+export default AdministrasiPembangunan;

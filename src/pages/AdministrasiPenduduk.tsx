@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, useState, useEffect } from "react";
 import {
   MaterialReactTable,
   useMaterialReactTable,
@@ -8,10 +8,10 @@ import Footer from "../components/organisms/Footer";
 import Navbar from "../components/organisms/Navbar";
 import { IonContent, IonPage } from "@ionic/react";
 import Styles from "../styles/AdministrasiPenduduk.module.css";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../config/firebase";
 
-//example data type
-type Person = {
-  nomor: string;
+type Penduduk = {
   name: {
     firstName: string;
     lastName: string;
@@ -22,103 +22,69 @@ type Person = {
   religion: string;
 };
 
-//nested data is ok, see accessorKeys in ColumnDef below
-const data: Person[] = [
-  {
-    nomor: "1",
-    name: {
-      firstName: "Ayaka",
-      lastName: "Kamisato",
-    },
-    address: "Inazuma",
-    email: "ayaka@gmail.com",
-    gender: "Woman",
-    religion: "Christian",
-  },
-  {
-    nomor: "2",
-    name: {
-      firstName: "Kazuha",
-      lastName: "Kaedehara",
-    },
-    address: "Inazuma",
-    email: "kazuha@gmail.com",
-    gender: "Man",
-    religion: "Christian",
-  },
-  {
-    nomor: "3",
-    name: {
-      firstName: "Sara",
-      lastName: "Kujou",
-    },
-    address: "Inazuma",
-    email: "sara@gmail.com",
-    gender: "Woman",
-    religion: "Christian",
-  },
-  {
-    nomor: "4",
-    name: {
-      firstName: "Shogun",
-      lastName: "Raiden",
-    },
-    address: "Inazuma",
-    email: "Raiden@gmail.com",
-    gender: "Woman",
-    religion: "Christian",
-  },
-  {
-    nomor: "5",
-    name: {
-      firstName: "Kokomi",
-      lastName: "Sangonomia",
-    },
-    address: "Inazuma",
-    email: "kokomi@gmail.com",
-    gender: "Woman",
-    religion: "Christian",
-  },
-];
+const AdministrasiPenduduk = () => {
+  const pendudukRef = collection(db, "penduduk");
 
-const Example = () => {
-  //should be memoized or stable
-  const columns = useMemo<MRT_ColumnDef<Person>[]>(
+  const [pendudukList, setPendudukList] = useState<Penduduk[]>([]);
+
+  useEffect(() => {
+    const getPembangunanList = async () => {
+      try {
+        const data = await getDocs(pendudukRef);
+        const items = data.docs.map((doc) => {
+          const { firstName, lastName } = doc.data().name;
+          const { address, email, gender, religion } = doc.data();
+          return {
+            name: {
+              firstName,
+              lastName,
+            },
+            address,
+            email,
+            gender,
+            religion,
+          };
+        });
+
+        setPendudukList(items);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getPembangunanList();
+  }, []);
+
+  const columns: MRT_ColumnDef<Penduduk>[] = useMemo(
     () => [
       {
-        accessorKey: "nomor",
-        header: "No",
-        size: 150,
+        header: "Nama Depan",
+        accessorKey: "name.firstName",
+        size: 75,
       },
       {
-        accessorKey: "name.firstName", //access nested data with dot notation
-        header: "First Name",
-        size: 150,
-      },
-      {
+        header: "Nama Belakang",
         accessorKey: "name.lastName",
-        header: "Last Name",
-        size: 150,
+        size: 75,
       },
       {
-        accessorKey: "address", //normal accessorKey
-        header: "Address",
+        header: "Alamat",
+        accessorKey: "address",
         size: 200,
       },
       {
-        accessorKey: "email",
         header: "Email",
+        accessorKey: "email",
         size: 150,
       },
       {
+        header: "Jenis Kelamin",
         accessorKey: "gender",
-        header: "Gender",
-        size: 150,
+        size: 100,
       },
       {
+        header: "Agama",
         accessorKey: "religion",
-        header: "Religion",
-        size: 150,
+        size: 100,
       },
     ],
     []
@@ -126,12 +92,15 @@ const Example = () => {
 
   const table = useMaterialReactTable({
     columns,
-    data, //data must be memoized or stable (useState, useMemo, defined outside of this component, etc.)
+    data: pendudukList,
+    enablePagination: true,
+    enableSorting: true,
+    enableStickyFooter: true,
   });
 
   return (
     <IonPage>
-      <Navbar>Administrasi Penduduk</Navbar>
+      <Navbar>Administrasi Pembangunan</Navbar>
       <IonContent>
         <div className={Styles.container}>
           <MaterialReactTable table={table} />
@@ -142,4 +111,4 @@ const Example = () => {
   );
 };
 
-export default Example;
+export default AdministrasiPenduduk;
