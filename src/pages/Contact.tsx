@@ -1,4 +1,4 @@
-import { IonContent, IonIcon, IonItem, IonPage } from '@ionic/react';
+import { IonContent, IonIcon, IonPage } from '@ionic/react';
 import Footer from '../components/organisms/Footer';
 import Input from '../components/atoms/input';
 import Navbar from '../components/organisms/Navbar';
