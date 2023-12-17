@@ -10,7 +10,7 @@ import {
   IonAccordion,
   IonAccordionGroup,
 } from "@ionic/react";
-import { cubeOutline, documentsOutline, logOutOutline, newspaperOutline } from "ionicons/icons";
+import { businessOutline, cubeOutline, documentsOutline, logOutOutline, newspaperOutline } from "ionicons/icons";
 import Styles from "./Sidebar.module.css";
 import { signOut } from "../../../../config/firebase";
 
@@ -75,6 +75,38 @@ const Sidebar = () => {
                     </IonItem>
                     <IonItem href="/admin/kelembagaan/create">
                       <IonLabel>Create Kelembagaan</IonLabel>
+                    </IonItem>
+                  </div>
+                </IonAccordion>
+              </IonAccordionGroup>
+              <IonAccordionGroup>
+                <IonAccordion value="first">
+                  <IonItem slot="header">
+                    <IonIcon icon={businessOutline} slot="start" />
+                    <IonLabel>Pembangunan</IonLabel>
+                  </IonItem>
+                  <div className={Styles.accordionItem} slot="content">
+                    <IonItem href="/admin/pembangunan">
+                      <IonLabel>Pembangunan</IonLabel>
+                    </IonItem>
+                    <IonItem href="/admin/pembangunan/create">
+                      <IonLabel>Create Pembangunan</IonLabel>
+                    </IonItem>
+                  </div>
+                </IonAccordion>
+              </IonAccordionGroup>
+              <IonAccordionGroup>
+                <IonAccordion value="first">
+                  <IonItem slot="header">
+                    <IonIcon icon={documentsOutline} slot="start" />
+                    <IonLabel>Penduduk</IonLabel>
+                  </IonItem>
+                  <div className={Styles.peopleOutline} slot="content">
+                    <IonItem href="/admin/penduduk">
+                      <IonLabel>Penduduk</IonLabel>
+                    </IonItem>
+                    <IonItem href="/admin/penduduk/create">
+                      <IonLabel>Create Penduduk</IonLabel>
                     </IonItem>
                   </div>
                 </IonAccordion>
