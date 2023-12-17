@@ -100,7 +100,7 @@ const AdministrasiPenduduk = () => {
 
   return (
     <IonPage>
-      <Navbar>Administrasi Pembangunan</Navbar>
+      <Navbar>Administrasi Penduduk</Navbar>
       <IonContent>
         <div className={Styles.container}>
           <MaterialReactTable table={table} />
