@@ -31,7 +31,7 @@ const AdministrasiKelembagaan = () => {
           return {
             name,
             description,
-            startFrom: startFrom.toDate().toLocaleDateString(),
+            startFrom: startFrom,
           };
         });
         setKelembagaanList(items);
