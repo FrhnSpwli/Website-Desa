@@ -31,7 +31,7 @@ const Artikel = () => {
       title: string;
       description: string;
       date: string;
-      detail: string;
+      // detail: string;
       imageUrl: string;
     }[]
   >([]);
@@ -42,7 +42,7 @@ const Artikel = () => {
       title: string;
       description: string;
       date: string;
-      detail: string;
+      // detail: string;
       imageUrl: string;
     }[]
   >([]);

@@ -115,14 +115,14 @@ const ArtikelCreate: React.FC = () => {
               handleInputChange("description", e.detail.value!)
             }
           />
-          <IonTextarea
+          {/* <IonTextarea
             label="Detail"
             labelPlacement="floating"
             autoGrow
             fill="solid"
             placeholder="Enter detail"
             onIonChange={(e) => handleInputChange("detail", e.detail.value!)}
-          />
+          /> */}
           <IonLabel>Image</IonLabel>
           <input type="file" accept="image/*" onChange={handleImageChange} />
           {artikel.image && (

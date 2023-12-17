@@ -30,7 +30,7 @@ const ArtikelEdit: React.FC = () => {
     title: "",
     description: "",
     date: "",
-    detail: "",
+    // detail: "",
     imageUrl: "",
   });
 
@@ -54,9 +54,9 @@ const ArtikelEdit: React.FC = () => {
       try {
         const data = await getDoc(doc(db, "artikel", id));
         if (data.exists()) {
-          const { title, description, date, detail } = data.data();
+          const { title, description, date } = data.data();
           const imageUrl = await getDownloadURL(ref(storage, `artikel/${id}`));
-          setArtikel({ id, title, description, date, detail, imageUrl });
+          setArtikel({ id, title, description, date, imageUrl });
         } else {
           console.error("Artikel not found");
         }
@@ -87,7 +87,7 @@ const ArtikelEdit: React.FC = () => {
         title: artikel.title,
         description: artikel.description,
         date: artikel.date,
-        detail: artikel.detail,
+        // detail: artikel.detail,
       });
 
       if (newImage) {
@@ -165,14 +165,14 @@ const ArtikelEdit: React.FC = () => {
               handleInputChange("description", e.detail.value!)
             }
           />
-          <IonTextarea
+          {/* <IonTextarea
             label="Detail"
             fill="solid"
             labelPlacement="floating"
             value={artikel.detail}
             placeholder="Enter detail"
             onIonChange={(e) => handleInputChange("detail", e.detail.value!)}
-          />
+          /> */}
           <IonLabel>Current Image</IonLabel>
           <IonImg src={artikel.imageUrl} alt={artikel.title} />
           <IonLabel>New Image</IonLabel>

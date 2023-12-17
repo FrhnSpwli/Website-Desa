@@ -25,9 +25,9 @@ const ArtikelDetail: React.FC = () => {
       try {
         const articleDoc = await getDoc(doc(db, "artikel", id));
         if (articleDoc.exists()) {
-          const { title, description, date, detail } = articleDoc.data();
+          const { title, description, date } = articleDoc.data();
           const imageUrl = await getDownloadURL(ref(storage, `artikel/${id}`));
-          setArticle({ id, title, description, date, detail, imageUrl });
+          setArticle({ id, title, description, date, imageUrl });
         } else {
           console.error("Article not found");
         }
@@ -62,7 +62,7 @@ const ArtikelDetail: React.FC = () => {
             </IonCardHeader>
             <IonCardContent>
               {article.description} <br />
-              {article.detail}
+              {/* {article.detail} */}
             </IonCardContent>
           </IonCard>
         </div>
