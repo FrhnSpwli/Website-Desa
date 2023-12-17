@@ -88,7 +88,7 @@ const ProductCreate: React.FC = () => {
             gap: "16px",
           }}
         >
-          <h1 style={{ alignSelf: "center" }}>Create Artikel</h1>
+          <h1 style={{ alignSelf: "center" }}>Create Product</h1>
           <IonInput
             label="Title"
             labelPlacement="floating"

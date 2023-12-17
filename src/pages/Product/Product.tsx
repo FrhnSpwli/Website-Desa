@@ -98,6 +98,13 @@ const Product = () => {
             <h1>Featured Product</h1>
           </div>
           <SearchBar onInput={handleInput}>Search Bar</SearchBar>
+
+          {productList.length === 0 && (
+            <div className={Styles.noArtikel}>
+              <h1>Loading</h1>
+            </div>
+          )}
+
           <div className={Styles.responsive}>
             {productList.map((item, index) => (
               <IonCard
