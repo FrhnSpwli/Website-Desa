@@ -116,7 +116,7 @@ const AdminPembangunan = () => {
       },
       {
         accessorKey: "luas",
-        header: "Luas",
+        header: "Luas(m2)",
         size: 150,
       },
       {
